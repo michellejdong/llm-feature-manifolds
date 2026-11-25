@@ -1,0 +1,5 @@
+.experiment/
+.venv/
+__pycache__/
+.DS_Store
+*.py[cod]

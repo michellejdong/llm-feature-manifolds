@@ -1,0 +1,9 @@
+{"step": 500, "train_batch_mse": 0.026320483535528183, "fvu_relative_to_fit_mean": 0.027474037147368575, "mean_nonzero_latents": 32.0, "latents_seen": 3072, "evaluation_tokens": 24576}
+{"step": 1000, "train_batch_mse": 0.015592560172080994, "fvu_relative_to_fit_mean": 0.0172352679190742, "mean_nonzero_latents": 32.0, "latents_seen": 3009, "evaluation_tokens": 24576}
+{"step": 1500, "train_batch_mse": 0.013898354023694992, "fvu_relative_to_fit_mean": 0.015402355861874856, "mean_nonzero_latents": 32.0, "latents_seen": 2971, "evaluation_tokens": 24576}
+{"step": 2000, "train_batch_mse": 0.01355042215436697, "fvu_relative_to_fit_mean": 0.014899785176856955, "mean_nonzero_latents": 32.0, "latents_seen": 2945, "evaluation_tokens": 24576}
+{"step": 2500, "train_batch_mse": 0.012956182472407818, "fvu_relative_to_fit_mean": 0.014504173556246691, "mean_nonzero_latents": 32.0, "latents_seen": 2920, "evaluation_tokens": 24576}
+{"step": 3000, "train_batch_mse": 0.013026034459471703, "fvu_relative_to_fit_mean": 0.014184076768231094, "mean_nonzero_latents": 32.0, "latents_seen": 2893, "evaluation_tokens": 24576}
+{"step": 3500, "train_batch_mse": 0.01266942173242569, "fvu_relative_to_fit_mean": 0.01392739353296378, "mean_nonzero_latents": 32.0, "latents_seen": 2868, "evaluation_tokens": 24576}
+{"step": 4000, "train_batch_mse": 0.012053674086928368, "fvu_relative_to_fit_mean": 0.013712868662519188, "mean_nonzero_latents": 32.0, "latents_seen": 2870, "evaluation_tokens": 24576}
+{"step": 4500, "train_batch_mse": 0.011986764147877693, "fvu_relative_to_fit_mean": 0.013504387203521576, "mean_nonzero_latents": 32.0, "latents_seen": 2862, "evaluation_tokens": 24576}

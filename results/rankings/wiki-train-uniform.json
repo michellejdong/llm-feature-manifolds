@@ -1,0 +1,18 @@
+{
+  "split": "wiki-train",
+  "tokens": 779920,
+  "shards": 24,
+  "sampling": "uniform",
+  "points_per_group": 224,
+  "seed": 20261125,
+  "modes": [
+    "raw",
+    "unit",
+    "transverse",
+    "pca23",
+    "shell"
+  ],
+  "repeats": 3,
+  "gaussian_controls_per_group_per_repeat": 0,
+  "ranking_uses_tokens": false
+}

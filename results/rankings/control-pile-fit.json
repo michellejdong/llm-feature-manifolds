@@ -1,0 +1,18 @@
+{
+  "split": "pile-fit",
+  "tokens": 2050056,
+  "shards": 64,
+  "sampling": "balanced",
+  "points_per_group": 224,
+  "seed": 20261125,
+  "modes": [
+    "raw",
+    "unit",
+    "pca23",
+    "shell",
+    "annulus"
+  ],
+  "repeats": 1,
+  "gaussian_controls_per_group_per_repeat": 64,
+  "ranking_uses_tokens": false
+}

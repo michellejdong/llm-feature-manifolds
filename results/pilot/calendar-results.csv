@@ -1,0 +1,3 @@
+concept,group,split,corpus_tokens,labeled_tokens,token_accuracy,token_mae_degrees,centroid_mae_degrees,raw_rank,unit_rank,transverse_rank
+Weekdays,138,pile-fit,254801,49,0.7346938775510204,15.97706851964466,11.808425006228493,53,326,91
+Months,251,pile-fit,254801,91,0.7252747252747253,15.108928964568717,16.875775155856513,60,584,218

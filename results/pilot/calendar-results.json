@@ -1,0 +1,84 @@
+{
+  "ranking_sha256_before_label_reveal": {
+    "pilot-rank.csv": "c31b073c024a386c53b52316824f68121a4c6e99a032ba40e830d20dc204980f"
+  },
+  "calendars": {
+    "Weekdays": {
+      "group": 138,
+      "labels": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "pc2_pc3_variance": 0.13808715343475342,
+      "splits": {
+        "pile-fit": {
+          "labeled_tokens": 49,
+          "counts": [
+            4,
+            10,
+            9,
+            10,
+            5,
+            4,
+            7
+          ],
+          "token_accuracy": 0.7346938775510204,
+          "token_mae_degrees": 15.97706851964466,
+          "centroid_mae_degrees": 11.808425006228493,
+          "raw_rank": 53,
+          "unit_rank": 326,
+          "transverse_rank": 91
+        }
+      }
+    },
+    "Months": {
+      "group": 251,
+      "labels": [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+      ],
+      "pc2_pc3_variance": 0.15611186623573303,
+      "splits": {
+        "pile-fit": {
+          "labeled_tokens": 91,
+          "counts": [
+            6,
+            5,
+            4,
+            11,
+            7,
+            4,
+            11,
+            16,
+            2,
+            8,
+            9,
+            8
+          ],
+          "token_accuracy": 0.7252747252747253,
+          "token_mae_degrees": 15.108928964568717,
+          "centroid_mae_degrees": 16.875775155856513,
+          "raw_rank": 60,
+          "unit_rank": 584,
+          "transverse_rank": 218
+        }
+      }
+    }
+  },
+  "document_overlap_counts": {}
+}

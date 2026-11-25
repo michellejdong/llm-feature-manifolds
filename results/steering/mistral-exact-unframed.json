@@ -1,0 +1,31 @@
+{
+  "model": "mlx-community/Mistral-7B-v0.1-q",
+  "revision": "1b5b8ebdb79dcba7d6a8fc002619aaa3043c9f34",
+  "layer_pre_block": 12,
+  "compact_fit": true,
+  "fit_examples": 72,
+  "calibration_examples": 24,
+  "exact": {
+    "prompt": "Two months after November is",
+    "original_answer": "January",
+    "target_answer": "February",
+    "probabilities": {
+      "baseline": [
+        0.00040785150486044586,
+        0.00033680256456136703
+      ],
+      "circle": [
+        0.0004379770252853632,
+        0.00036168014048598707
+      ],
+      "random_mean": [
+        0.00040276095387525856,
+        0.00033388944575563073
+      ]
+    },
+    "original_top_token": "a",
+    "patched_top_token": "a",
+    "circle_logit_shift": 0.0,
+    "random_logit_shift_mean": 0.00390625
+  }
+}

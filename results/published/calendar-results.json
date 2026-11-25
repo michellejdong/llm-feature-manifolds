@@ -1,0 +1,195 @@
+{
+  "ranking_sha256_before_label_reveal": {
+    "full-fit-balanced.csv": "cb7531a5bb73d96d673da29411df826ae3520f9763850d78f53849f80c557395",
+    "pile-holdout-balanced.csv": "6e151ebaee30620a5f44a0e08f318b4f7f2f4cb50579af6dfa69f7276858f408",
+    "wiki-train-balanced.csv": "03fd66e26a843299802c3e471134f19d3f2f5aac8cc96f0e967b922d05089e43"
+  },
+  "calendars": {
+    "Weekdays": {
+      "group": 138,
+      "labels": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "pc2_pc3_variance": 0.15342894196510315,
+      "splits": {
+        "pile-fit": {
+          "labeled_tokens": 431,
+          "counts": [
+            72,
+            53,
+            47,
+            62,
+            80,
+            59,
+            58
+          ],
+          "token_accuracy": 0.9976798143851509,
+          "token_mae_degrees": 8.566571821195996,
+          "centroid_mae_degrees": 8.19125976094925,
+          "labeled_documents": 150,
+          "largest_document_fraction": 0.0951276102088167,
+          "raw_rank": 533,
+          "unit_rank": 494,
+          "transverse_rank": 742,
+          "pca23_rank": 870,
+          "shell_rank": 104
+        },
+        "pile-holdout": {
+          "labeled_tokens": 679,
+          "counts": [
+            200,
+            26,
+            23,
+            19,
+            45,
+            217,
+            149
+          ],
+          "token_accuracy": 1.0,
+          "token_mae_degrees": 6.505691551883161,
+          "centroid_mae_degrees": 8.173882461061977,
+          "labeled_documents": 19,
+          "largest_document_fraction": 0.946980854197349,
+          "raw_rank": 352,
+          "unit_rank": 903,
+          "transverse_rank": 430,
+          "pca23_rank": 434,
+          "shell_rank": 819
+        },
+        "wiki-train": {
+          "labeled_tokens": 71,
+          "counts": [
+            9,
+            6,
+            5,
+            6,
+            9,
+            11,
+            25
+          ],
+          "token_accuracy": 1.0,
+          "token_mae_degrees": 5.986337014535703,
+          "centroid_mae_degrees": 7.2711132480890805,
+          "labeled_documents": 35,
+          "largest_document_fraction": 0.18309859154929578,
+          "raw_rank": 460,
+          "unit_rank": 859,
+          "transverse_rank": 384,
+          "pca23_rank": 879,
+          "shell_rank": 943
+        }
+      }
+    },
+    "Months": {
+      "group": 251,
+      "labels": [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+      ],
+      "pc2_pc3_variance": 0.14452765882015228,
+      "splits": {
+        "pile-fit": {
+          "labeled_tokens": 1226,
+          "counts": [
+            90,
+            73,
+            106,
+            88,
+            171,
+            109,
+            121,
+            79,
+            102,
+            113,
+            84,
+            90
+          ],
+          "token_accuracy": 0.5195758564437194,
+          "token_mae_degrees": 23.471694413544036,
+          "centroid_mae_degrees": 12.583615125008984,
+          "labeled_documents": 301,
+          "largest_document_fraction": 0.05301794453507341,
+          "raw_rank": 31,
+          "unit_rank": 94,
+          "transverse_rank": 587,
+          "pca23_rank": 228,
+          "shell_rank": 10
+        },
+        "pile-holdout": {
+          "labeled_tokens": 668,
+          "counts": [
+            26,
+            21,
+            40,
+            43,
+            182,
+            42,
+            58,
+            52,
+            70,
+            54,
+            42,
+            38
+          ],
+          "token_accuracy": 0.5673652694610778,
+          "token_mae_degrees": 22.696859371130813,
+          "centroid_mae_degrees": 14.3481875984246,
+          "labeled_documents": 43,
+          "largest_document_fraction": 0.7050898203592815,
+          "raw_rank": 119,
+          "unit_rank": 225,
+          "transverse_rank": 611,
+          "pca23_rank": 427,
+          "shell_rank": 669
+        },
+        "wiki-train": {
+          "labeled_tokens": 2753,
+          "counts": [
+            208,
+            206,
+            216,
+            166,
+            200,
+            261,
+            190,
+            269,
+            251,
+            304,
+            229,
+            253
+          ],
+          "token_accuracy": 0.4936432982201235,
+          "token_mae_degrees": 24.935035178519634,
+          "centroid_mae_degrees": 13.506073501858236,
+          "labeled_documents": 175,
+          "largest_document_fraction": 0.03741373047584454,
+          "raw_rank": 38,
+          "unit_rank": 644,
+          "transverse_rank": 236,
+          "pca23_rank": 34,
+          "shell_rank": 236
+        }
+      }
+    }
+  },
+  "document_overlap_counts": {
+    "pile-fit vs pile-holdout": 0,
+    "pile-fit vs wiki-train": 0
+  }
+}

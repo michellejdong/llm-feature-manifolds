@@ -1,0 +1,21 @@
+sampling,method,holdout,spearman,shared_top_25,shared_top_100
+uniform,raw,Pile holdout,0.5831453831453831,2,23
+uniform,unit,Pile holdout,0.6933937053937054,6,43
+uniform,transverse,Pile holdout,0.5727706767706768,2,27
+uniform,pca23,Pile holdout,0.4274000954000955,3,25
+uniform,shell,Pile holdout,0.6692410772410773,7,42
+uniform,raw,WikiText,0.5732905412905414,1,27
+uniform,unit,WikiText,0.6490352530352531,6,39
+uniform,transverse,WikiText,0.539043203043203,0,28
+uniform,pca23,WikiText,0.406000834000834,2,17
+uniform,shell,WikiText,0.5905382545382546,4,40
+balanced,raw,Pile holdout,0.7084195684195685,6,37
+balanced,unit,Pile holdout,0.6587410187410189,3,33
+balanced,transverse,Pile holdout,0.7435369435369437,5,36
+balanced,pca23,Pile holdout,0.438964470964471,3,21
+balanced,shell,Pile holdout,0.7354519114519116,5,41
+balanced,raw,WikiText,0.705967665967666,5,38
+balanced,unit,WikiText,0.6615067455067456,5,35
+balanced,transverse,WikiText,0.7272220152220153,4,43
+balanced,pca23,WikiText,0.4597077637077638,3,21
+balanced,shell,WikiText,0.7047940407940408,3,32
