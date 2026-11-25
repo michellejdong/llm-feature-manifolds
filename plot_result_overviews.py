@@ -20,6 +20,9 @@ TEAL = "#08786d"
 ORANGE = "#a76529"
 PURPLE = "#805d93"
 GRAY = "#77889b"
+CORPORA = ("Pile discovery", "Pile holdout", "WikiText", "News test")
+SPLITS = ("pile-fit", "pile-holdout", "wiki-train", "news-test")
+BASELINES = ("doc-cap-pile-fit", "doc-cap-pile-holdout", "doc-cap-wiki-train", "news-doc-cap-4")
 
 
 def rows(path: Path) -> list[dict]:
@@ -33,15 +36,17 @@ def style(ax, axis="y"):
     ax.set_axisbelow(True)
 
 
+def rank_records(folder: Path, stems: tuple[str, ...]) -> list[dict[int, dict]]:
+    return [{int(r["group"]): r for r in rows(folder / f"{name}.csv")} for name in stems]
+
+
 def discovery(results: Path, output: Path) -> None:
-    corpora = ("Pile discovery", "Pile holdout", "WikiText", "News test")
-    files = ("doc-cap-pile-fit", "doc-cap-pile-holdout", "doc-cap-wiki-train", "news-doc-cap-4")
-    records = [{int(r["group"]): r for r in rows(results / "rankings" / f"{name}.csv")} for name in files]
+    records = rank_records(results / "rankings", BASELINES)
     variants = ((138, "prototype_rank", "Weekdays · prototype persistence", BLUE),
                 (251, "raw_rank", "Months · raw persistence", TEAL),
                 (212, "raw_rank", "Years · raw persistence", ORANGE))
     fig, (left, right) = plt.subplots(1, 2, figsize=(10.6, 4.2), layout="constrained")
-    x = np.arange(len(corpora))
+    x = np.arange(len(CORPORA))
     for group, column, label, color in variants:
         left.plot(x, [int(table[group][column]) for table in records], "o-", label=label,
                   color=color, markersize=5, linewidth=1.5)
@@ -49,21 +54,21 @@ def discovery(results: Path, output: Path) -> None:
     left.set_yscale("log")
     left.set_ylim(1150, 0.8)
     left.set_yticks([1, 10, 25, 100, 1000], ["1", "10", "25", "100", "1,000"])
-    left.set_xticks(x, corpora, rotation=15, ha="right")
+    left.set_xticks(x, CORPORA, rotation=15, ha="right")
     left.set_ylabel("Blind rank among 1,000 groups")
     left.set_title("Finding the groups blind", loc="left", weight="semibold")
     handles, labels = left.get_legend_handles_labels()
     fig.legend(handles, labels, frameon=False, fontsize=8, loc="outside lower center", ncols=3)
     full = rows(results / "published/calendar-results.csv") + rows(results / "document-controls/calendar-results.csv")
     measurements = {(r["concept"], r["split"]): r for r in full}
-    evaluation = ("pile-holdout", "wiki-train", "news-test")
+    evaluation = SPLITS[1:]
     for concept, color in (("Weekdays", BLUE), ("Months", TEAL)):
         values = [100 * float(measurements[concept, split]["token_accuracy"]) for split in evaluation]
         right.plot(range(3), values, "o-", label=concept, color=color, linewidth=1.6, markersize=5)
         for i, value in enumerate(values):
             right.annotate(f"{value:.1f}%", (i, value), xytext=(0, 7), textcoords="offset points",
                            ha="center", color=color, fontsize=8)
-    right.set_xticks(range(3), corpora[1:], rotation=15, ha="right")
+    right.set_xticks(range(3), CORPORA[1:], rotation=15, ha="right")
     right.set_ylim(0, 109)
     right.set_ylabel("Named tokens nearest the right angle (%)")
     right.set_title("Reading the known groups after reveal", loc="left", weight="semibold")
@@ -137,6 +142,33 @@ def controls(results: Path, output: Path) -> None:
     plt.close(fig)
 
 
+def ranking_methods(results: Path, output: Path) -> None:
+    baseline = rank_records(results / "rankings", BASELINES)
+    alternatives = rank_records(results / "irreducibility", SPLITS)
+    labels = ("Raw persistence", "Prototype persistence", "Best adjacent PC loop", "Mixture and separability")
+    methods = ((baseline, "raw_rank"), (baseline, "prototype_rank"),
+               (alternatives, "pca-adjacent_rank"), (alternatives, "irreducibility_rank"))
+    fig, axes = plt.subplots(1, 3, figsize=(11.0, 3.6), sharey=True, layout="constrained")
+    groups = (("Weekdays", 138), ("Months", 251), ("Years", 212))
+    for ax, (name, group) in zip(axes, groups, strict=True):
+        ranks = np.array([[int(table[group][key]) for table in tables] for tables, key in methods])
+        heatmap = ax.imshow(ranks, cmap="Blues_r", norm=matplotlib.colors.LogNorm(vmin=1, vmax=1000))
+        for (y, x), value in np.ndenumerate(ranks):
+            ax.text(x, y, str(value), ha="center", va="center", fontsize=8,
+                    color="white" if value < 26 else "#182939")
+        ax.set_xticks(range(len(CORPORA)), CORPORA, rotation=23, ha="right", fontsize=8)
+        ax.set_yticks(range(len(labels)), labels, fontsize=8)
+        ax.set_title(name, fontsize=12, weight="semibold")
+        ax.tick_params(length=0)
+        ax.spines[:].set_visible(False)
+    colorbar = fig.colorbar(heatmap, ax=axes, fraction=0.045, pad=0.035, ticks=[1, 10, 100, 1000])
+    colorbar.ax.set_yticklabels(["1", "10", "100", "1,000"], fontsize=8)
+    colorbar.ax.invert_yaxis()
+    colorbar.set_label("Blind rank", fontsize=9)
+    fig.savefig(output / "ranking-methods.png", dpi=210)
+    plt.close(fig)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--results", type=Path, default=PROJECT / "results")
@@ -145,6 +177,8 @@ def main() -> None:
     args.output.mkdir(parents=True, exist_ok=True)
     for plot in (discovery, steering, controls):
         plot(args.results, args.output)
+    if all((args.results / "irreducibility" / f"{name}.csv").is_file() for name in SPLITS):
+        ranking_methods(args.results, args.output)
 
 
 if __name__ == "__main__":

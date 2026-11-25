@@ -16,6 +16,10 @@ The left panel puts rank 1 at the top and shades the top 25. The month group ran
 
 The year group formed an ordered arc in the third and fourth principal components. Its mean circular year error was 4.4–4.7 years over the three held-out corpora. Months were harder to place than weekdays, and the fixed weekday readout was sensitive to abbreviations and case in newly written prompts. [Year geometry](results/year-geometry/year-geometry.png) · [Calendar format comparison](results/format-transfer/calendar-format-transfer.png)
 
+![A rank matrix comparing four geometry scores across corpora for weekdays, months, and years](results/overview/ranking-methods.png)
+
+Each cell gives a rank out of 1,000, with darker cells marking higher ranks. A small-sample approximation to the paper's mixture-and-separability score put weekdays 11th and months 15th on news. It put years 10th on WikiText. The aggregate ranks were 43rd, 45th, and 49th, respectively. This score searches for dependence across rotated coordinates and checks how much of the cloud can fit in a narrow band. It complements loop persistence, which looks for a hole. [Alternative ranking tables](results/irreducibility/) · [Engels et al., Appendix B.2](https://arxiv.org/html/2405.14860#A2.SS2)
+
 ### What survived additional controls
 
 ![Observed persistence minus the median shuffled control across two corpora](results/overview/coactivation-controls.png)
