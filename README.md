@@ -2,7 +2,7 @@
 
 This project reconstructs the published weekday, month, and year groups in frozen GPT-2-small and ranks all 1,000 groups before reading token labels. Independently trained sparse autoencoders test whether a new dictionary recovers the geometry. In Mistral, we change calendar coordinates at the input month token and measure the effect on the answer.
 
-[Visual results guide](RESULTS.md) · [Jupyter tutorials with bundled data](notebooks/README.md)
+[Visual results guide](RESULTS.md) · [Illustrated design and results report (PDF)](reports/calendar-study-walkthrough.pdf) · [Jupyter tutorials with bundled data](notebooks/README.md)
 
 The GPT-2 experiment uses the 1,000 groups from the authors' archive at commit `ff8c7eee8f13d78805f590ced6f3fc2227dd1daa` and Joseph Bloom's 24,576-feature SAE at `blocks.7.hook_resid_pre`. The author-provided pickle was converted into [JSON](published-groups.json) after verifying its checksum and list and integer structure. It partitions all 24,576 feature IDs. The reported mean decoder cosine checks are reproduced at 0.6341 for weekdays, 0.5252 for months, and 0.5571 for 20th-century years. [Engels et al.](https://proceedings.iclr.cc/paper_files/paper/2025/hash/d3221cdb27e49d9c1cd35ad254feccfe-Abstract-Conference.html), [Replication repository](https://github.com/JoshEngels/MultiDimensionalFeatures), [Bloom's SAE](https://huggingface.co/jbloom/GPT2-Small-SAEs-Reformatted)
 
