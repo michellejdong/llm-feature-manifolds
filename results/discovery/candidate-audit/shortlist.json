@@ -1,0 +1,195 @@
+{
+  "discovery_rankings": {
+    "doc-cap-pile-fit.csv": "4c86a4e8b1a4cb132de4e2233f1bf9a0088b76b3cb04b80c79fc6f1edaa7b4d5",
+    "doc-cap-pile-holdout.csv": "408fb225714223a7327a71397b16b8a50fcd2277020ecf140dd585ca4407b528",
+    "doc-cap-wiki-train.csv": "6f73ba27c980697abeb2921a7ccef3b00df83c31a9274cc24f07d48da8d06a49"
+  },
+  "evaluation": [
+    "news-test",
+    "wiki-test"
+  ],
+  "draws_per_repeat": 31,
+  "repeats": 3,
+  "document_cap": 4,
+  "seed": 479204,
+  "points": 192,
+  "shortlist": [
+    {
+      "group": 77,
+      "method": "raw",
+      "reference": false,
+      "discovery_ranks": [
+        6,
+        3,
+        28
+      ],
+      "discovery_geometric_mean_rank": 7.958114415792782
+    },
+    {
+      "group": 325,
+      "method": "raw",
+      "reference": false,
+      "discovery_ranks": [
+        1,
+        127,
+        18
+      ],
+      "discovery_geometric_mean_rank": 13.173223958762689
+    },
+    {
+      "group": 162,
+      "method": "raw",
+      "reference": false,
+      "discovery_ranks": [
+        37,
+        6,
+        46
+      ],
+      "discovery_geometric_mean_rank": 21.695530236693955
+    },
+    {
+      "group": 686,
+      "method": "raw",
+      "reference": false,
+      "discovery_ranks": [
+        23,
+        70,
+        14
+      ],
+      "discovery_geometric_mean_rank": 28.247800491817788
+    },
+    {
+      "group": 231,
+      "method": "raw",
+      "reference": false,
+      "discovery_ranks": [
+        12,
+        28,
+        86
+      ],
+      "discovery_geometric_mean_rank": 30.68639772021952
+    },
+    {
+      "group": 519,
+      "method": "raw",
+      "reference": false,
+      "discovery_ranks": [
+        3,
+        74,
+        163
+      ],
+      "discovery_geometric_mean_rank": 33.07604135714582
+    },
+    {
+      "group": 334,
+      "method": "raw",
+      "reference": false,
+      "discovery_ranks": [
+        29,
+        52,
+        26
+      ],
+      "discovery_geometric_mean_rank": 33.972295770987465
+    },
+    {
+      "group": 419,
+      "method": "raw",
+      "reference": false,
+      "discovery_ranks": [
+        17,
+        36,
+        65
+      ],
+      "discovery_geometric_mean_rank": 34.136704514581815
+    },
+    {
+      "group": 138,
+      "method": "raw",
+      "reference": true,
+      "discovery_ranks": [
+        583,
+        316,
+        303
+      ],
+      "discovery_geometric_mean_rank": 382.1783566304372
+    },
+    {
+      "group": 251,
+      "method": "raw",
+      "reference": true,
+      "discovery_ranks": [
+        4,
+        98,
+        2
+      ],
+      "discovery_geometric_mean_rank": 9.220872584116893
+    },
+    {
+      "group": 544,
+      "method": "prototype",
+      "reference": false,
+      "discovery_ranks": [
+        23,
+        9,
+        10
+      ],
+      "discovery_geometric_mean_rank": 12.744518982084
+    },
+    {
+      "group": 269,
+      "method": "prototype",
+      "reference": false,
+      "discovery_ranks": [
+        41,
+        2,
+        67
+      ],
+      "discovery_geometric_mean_rank": 17.64532052594493
+    },
+    {
+      "group": 15,
+      "method": "prototype",
+      "reference": false,
+      "discovery_ranks": [
+        10,
+        24,
+        27
+      ],
+      "discovery_geometric_mean_rank": 18.643395035723156
+    },
+    {
+      "group": 36,
+      "method": "prototype",
+      "reference": false,
+      "discovery_ranks": [
+        165,
+        33,
+        2
+      ],
+      "discovery_geometric_mean_rank": 22.16541974506152
+    },
+    {
+      "group": 138,
+      "method": "prototype",
+      "reference": true,
+      "discovery_ranks": [
+        251,
+        466,
+        672
+      ],
+      "discovery_geometric_mean_rank": 428.3607172440942
+    },
+    {
+      "group": 251,
+      "method": "prototype",
+      "reference": true,
+      "discovery_ranks": [
+        161,
+        293,
+        54
+      ],
+      "discovery_geometric_mean_rank": 136.57223564620048
+    }
+  ],
+  "completed_audit_before_token_reveal_sha256": "72565b054eb641ec6c27c730198f8f53e56ca34950a46f2450bf111f3b54b7e4"
+}

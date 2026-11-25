@@ -1,0 +1,16 @@
+{
+  "split": "news-test",
+  "tokens": 756102,
+  "shards": 24,
+  "sampling": "balanced",
+  "points_per_group": 224,
+  "seed": 20261125,
+  "per_document_limit": 4,
+  "modes": [
+    "raw",
+    "prototype"
+  ],
+  "repeats": 3,
+  "gaussian_controls_per_group_per_repeat": 0,
+  "ranking_uses_tokens": false
+}

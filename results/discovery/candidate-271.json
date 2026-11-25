@@ -1,0 +1,263 @@
+{
+  "group": 271,
+  "suffix": "ing",
+  "analysis": [
+    {
+      "split": "pile-fit",
+      "raw_blind_rank": 40,
+      "selection_points": 256,
+      "selection_documents": 164,
+      "corpus_suffix_rate": 0.014748377605294684,
+      "selected_suffix_rate": 1.0,
+      "selected_type_counts": [
+        98,
+        74,
+        84
+      ],
+      "mean_type_accuracy": 0.4085463014034443,
+      "top_selected_tokens": [
+        [
+          "ing",
+          98
+        ],
+        [
+          "moving",
+          11
+        ],
+        [
+          "ating",
+          11
+        ],
+        [
+          "playing",
+          5
+        ],
+        [
+          "deciding",
+          4
+        ],
+        [
+          "ging",
+          3
+        ],
+        [
+          "testing",
+          3
+        ],
+        [
+          "ving",
+          3
+        ],
+        [
+          "stopping",
+          3
+        ],
+        [
+          "illing",
+          3
+        ],
+        [
+          "izing",
+          3
+        ],
+        [
+          "ulating",
+          3
+        ]
+      ]
+    },
+    {
+      "split": "pile-holdout",
+      "raw_blind_rank": 6,
+      "selection_points": 256,
+      "selection_documents": 100,
+      "corpus_suffix_rate": 0.014889800102511532,
+      "selected_suffix_rate": 1.0,
+      "selected_type_counts": [
+        45,
+        70,
+        141
+      ],
+      "mean_type_accuracy": 0.3606101542271755,
+      "top_selected_tokens": [
+        [
+          "ing",
+          43
+        ],
+        [
+          "testing",
+          7
+        ],
+        [
+          "loading",
+          6
+        ],
+        [
+          "elling",
+          4
+        ],
+        [
+          "ating",
+          4
+        ],
+        [
+          "finding",
+          3
+        ],
+        [
+          "illing",
+          3
+        ],
+        [
+          "ting",
+          3
+        ],
+        [
+          "reading",
+          3
+        ],
+        [
+          "putting",
+          3
+        ],
+        [
+          "locking",
+          3
+        ],
+        [
+          "iting",
+          3
+        ]
+      ]
+    },
+    {
+      "split": "wiki-train",
+      "raw_blind_rank": 25,
+      "selection_points": 256,
+      "selection_documents": 118,
+      "corpus_suffix_rate": 0.02060083085444661,
+      "selected_suffix_rate": 1.0,
+      "selected_type_counts": [
+        69,
+        71,
+        116
+      ],
+      "mean_type_accuracy": 0.38660540621707923,
+      "top_selected_tokens": [
+        [
+          "ing",
+          69
+        ],
+        [
+          "playing",
+          8
+        ],
+        [
+          "ening",
+          7
+        ],
+        [
+          "supporting",
+          6
+        ],
+        [
+          "starting",
+          6
+        ],
+        [
+          "orting",
+          5
+        ],
+        [
+          "forming",
+          5
+        ],
+        [
+          "Rolling",
+          4
+        ],
+        [
+          "aling",
+          4
+        ],
+        [
+          "illing",
+          4
+        ],
+        [
+          "negotiating",
+          4
+        ],
+        [
+          "talking",
+          4
+        ]
+      ]
+    },
+    {
+      "split": "news-test",
+      "raw_blind_rank": 57,
+      "selection_points": 256,
+      "selection_documents": 177,
+      "corpus_suffix_rate": 0.026635295237944088,
+      "selected_suffix_rate": 1.0,
+      "selected_type_counts": [
+        55,
+        99,
+        102
+      ],
+      "mean_type_accuracy": 0.3958803723509606,
+      "top_selected_tokens": [
+        [
+          "ing",
+          54
+        ],
+        [
+          "driving",
+          9
+        ],
+        [
+          "itting",
+          9
+        ],
+        [
+          "ling",
+          7
+        ],
+        [
+          "starting",
+          6
+        ],
+        [
+          "eating",
+          6
+        ],
+        [
+          "ering",
+          5
+        ],
+        [
+          "king",
+          5
+        ],
+        [
+          "aring",
+          4
+        ],
+        [
+          "climbing",
+          4
+        ],
+        [
+          "racing",
+          4
+        ],
+        [
+          "managing",
+          4
+        ]
+      ]
+    }
+  ],
+  "selection": "Strongest 256 active points after a cap of four per document"
+}

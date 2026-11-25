@@ -1,0 +1,33 @@
+{
+  "split": "news-test",
+  "points": 192,
+  "seed": 56023,
+  "trials_per_group_and_strength": 4,
+  "background_groups": [
+    367,
+    273,
+    480,
+    429,
+    556,
+    369,
+    120,
+    253,
+    830,
+    26,
+    483,
+    153,
+    734,
+    242,
+    295,
+    725,
+    337,
+    220,
+    465,
+    431,
+    698,
+    165,
+    588,
+    162
+  ],
+  "uses_token_labels": false
+}

@@ -13,7 +13,7 @@ from threadpoolctl import threadpool_limits
 from transformers import AutoTokenizer
 
 from rank import PROJECT, document_capped_rows, load_decoder, load_groups
-from reveal import load_dataset, read_ranking
+from reveal import SPLIT_NAMES, load_dataset, read_ranking
 
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -55,13 +55,15 @@ def main() -> None:
     decoder = load_decoder(args.work_dir)
     tokenizer = AutoTokenizer.from_pretrained(args.work_dir / "assets/gpt2", local_files_only=True)
     args.output.mkdir(parents=True, exist_ok=True)
-    fig, axs = plt.subplots(1, len(args.rankings), figsize=(max(4.4 * len(args.rankings), 6), 4),
+    nrows = 2 if len(args.rankings) > 3 else 1
+    ncols = (len(args.rankings) + nrows - 1) // nrows
+    fig, axs = plt.subplots(nrows, ncols, figsize=(max(4.15 * ncols, 6), 3.75 * nrows),
                             squeeze=False, sharex=True, sharey=True, layout="constrained")
-    fig.suptitle(f"GPT-2 feature group {args.group} · −{suffix} token types", fontsize=15, weight="semibold")
+    fig.suptitle(f"GPT-2 feature group {args.group} · -{suffix} token types", fontsize=15, weight="semibold")
     rows = []
     center, axes, centroids = None, None, None
     with threadpool_limits(limits=1):
-        for ax, path in zip(axs[0], args.rankings, strict=True):
+        for ax, path in zip(axs.flat, args.rankings):
             rankings, meta = read_ranking(path)
             data = load_dataset(args.work_dir, meta, len(decoder))
             points, selected = sample_group(data, decoder, features, 4)
@@ -97,11 +99,13 @@ def main() -> None:
             for i, (name, color) in enumerate(zip(TYPES, COLORS, strict=True)):
                 ax.scatter(*coords[labels == i].T, c=color, s=16, alpha=0.62, linewidths=0, label=name)
             ax.set_aspect("equal", adjustable="box")
-            ax.set_title(meta["split"], loc="left", fontsize=10, weight="medium")
+            ax.set_title(SPLIT_NAMES.get(meta["split"], meta["split"]), loc="left", fontsize=10, weight="medium")
             ax.set_xlabel("PC 2 and PC 3 projection", fontsize=8)
             ax.grid(alpha=0.2)
             ax.spines[["top", "right"]].set_visible(False)
     handles, names = axs[0, 0].get_legend_handles_labels()
+    for ax in list(axs.flat)[len(args.rankings):]:
+        ax.set_visible(False)
     fig.legend(handles, names, loc="outside lower center", frameon=False, ncols=4, fontsize=8)
     fig.savefig(args.output / f"candidate-{args.group}.png", dpi=200)
     plt.close(fig)

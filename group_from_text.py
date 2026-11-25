@@ -95,8 +95,7 @@ def decoder_graph(decoder: np.ndarray, neighbors: int, device: str) -> csr_matri
     return graph.maximum(graph.T)
 
 
-def communities(affinity: csr_matrix, resolution: float, seed: int) -> dict[int, list[int]]:
-    graph = nx.from_scipy_sparse_array(affinity)
+def communities(graph: nx.Graph, resolution: float, seed: int) -> dict[int, list[int]]:
     blocks = nx.community.louvain_communities(graph, weight="weight", resolution=resolution, seed=seed)
     result = sorted((sorted(block) for block in blocks), key=lambda block: (block[0], len(block)))
     return {i: block for i, block in enumerate(result) if len(block) >= 2}
@@ -125,6 +124,8 @@ def main() -> None:
     parser.add_argument("--tokens", type=int, default=150_000)
     parser.add_argument("--neighbors", type=int, default=12)
     parser.add_argument("--resolution", type=float, default=5.0)
+    parser.add_argument("--target-groups", type=int, default=0,
+                        help="Choose from up to six doubling steps by proximity to this size, without labels")
     parser.add_argument("--device", default="auto")
     parser.add_argument("--seed", type=int, default=20261125)
     args = parser.parse_args()
@@ -145,9 +146,21 @@ def main() -> None:
     results = {"fit_split": args.split, "sampled_tokens": binary.shape[0], "neighbors": args.neighbors,
                "resolution": args.resolution, "seed": args.seed, "uses_token_ids": False, "variants": {}}
     for name, graph in variants.items():
-        grouped = communities(graph, args.resolution, args.seed)
+        network = nx.from_scipy_sparse_array(graph)
+        passes = []
+        selected_resolution = args.resolution
+        for exponent in range(6 if args.target_groups else 1):
+            resolution = args.resolution * 2 ** exponent
+            trial = communities(network, resolution, args.seed)
+            passes.append((resolution, len(trial)))
+            if exponent == 0 or abs(len(trial) - args.target_groups) < abs(len(grouped) - args.target_groups):
+                grouped, selected_resolution = trial, resolution
+            print(f"{name} graph at resolution {resolution:g}: {len(trial):,} groups", flush=True)
+            if args.target_groups and len(trial) >= args.target_groups:
+                break
         (args.output / f"{name}-groups.json").write_text(json.dumps(grouped, separators=(",", ":")) + "\n")
         results["variants"][name] = {"n_groups": len(grouped), "largest_group": max(map(len, grouped.values())),
+                                      "selected_resolution": selected_resolution, "resolution_sweep": passes,
                                       "published_overlaps": overlaps(grouped, reference)}
         print(f"{name} graph yielded {len(grouped):,} communities with at least two features", flush=True)
     (args.output / "clustering-results.json").write_text(json.dumps(results, indent=2) + "\n")

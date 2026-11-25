@@ -1,0 +1,16 @@
+{
+  "split": "pile-holdout",
+  "tokens": 780400,
+  "shards": 24,
+  "sampling": "balanced",
+  "points_per_group": 224,
+  "seed": 20261125,
+  "per_document_limit": 4,
+  "modes": [
+    "pca-adjacent",
+    "irreducibility"
+  ],
+  "repeats": 1,
+  "gaussian_controls_per_group_per_repeat": 7,
+  "ranking_uses_tokens": false
+}

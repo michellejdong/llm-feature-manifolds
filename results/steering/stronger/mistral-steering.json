@@ -1,0 +1,183 @@
+{
+  "model": "mlx-community/Mistral-7B-v0.1-q",
+  "revision": "1b5b8ebdb79dcba7d6a8fc002619aaa3043c9f34",
+  "layer_pre_block": 14,
+  "compact_fit": true,
+  "fit_examples": 72,
+  "selected_plane_fit": "all-rows",
+  "calibration_examples": 24,
+  "calibration_style": "paper",
+  "calibration_offsets": [
+    4,
+    9
+  ],
+  "test_styles": [
+    "paper",
+    "paper-after"
+  ],
+  "test_offsets": [
+    2,
+    5,
+    7
+  ],
+  "donor_shifts": [
+    1,
+    -1,
+    3
+  ],
+  "layer_calibration": [
+    {
+      "layer": 2,
+      "fit_method": "all-rows",
+      "mean_logit_shift": 0.1139322891831398,
+      "r2": 0.9309181111326873
+    },
+    {
+      "layer": 2,
+      "fit_method": "centroids",
+      "mean_logit_shift": 0.1129557266831398,
+      "r2": 0.9315099221706521
+    },
+    {
+      "layer": 4,
+      "fit_method": "all-rows",
+      "mean_logit_shift": 0.1604817658662796,
+      "r2": 0.9806782686876624
+    },
+    {
+      "layer": 4,
+      "fit_method": "centroids",
+      "mean_logit_shift": 0.1604817658662796,
+      "r2": 0.9919888787570628
+    },
+    {
+      "layer": 6,
+      "fit_method": "all-rows",
+      "mean_logit_shift": 0.2421875,
+      "r2": 0.9734763191950758
+    },
+    {
+      "layer": 6,
+      "fit_method": "centroids",
+      "mean_logit_shift": 0.2307942658662796,
+      "r2": 0.9781857372447796
+    },
+    {
+      "layer": 8,
+      "fit_method": "all-rows",
+      "mean_logit_shift": 0.2854817807674408,
+      "r2": 0.9743822885918229
+    },
+    {
+      "layer": 8,
+      "fit_method": "centroids",
+      "mean_logit_shift": 0.2731119692325592,
+      "r2": 0.9817992571937842
+    },
+    {
+      "layer": 10,
+      "fit_method": "all-rows",
+      "mean_logit_shift": 0.27734375,
+      "r2": 0.9762356700835974
+    },
+    {
+      "layer": 10,
+      "fit_method": "centroids",
+      "mean_logit_shift": 0.26171875,
+      "r2": 0.9844578407671991
+    },
+    {
+      "layer": 12,
+      "fit_method": "all-rows",
+      "mean_logit_shift": 0.4016927182674408,
+      "r2": 0.956858177819111
+    },
+    {
+      "layer": 12,
+      "fit_method": "centroids",
+      "mean_logit_shift": 0.2740885317325592,
+      "r2": 0.9820057457910907
+    },
+    {
+      "layer": 14,
+      "fit_method": "all-rows",
+      "mean_logit_shift": 0.4036458432674408,
+      "r2": 0.9456624936454813
+    },
+    {
+      "layer": 14,
+      "fit_method": "centroids",
+      "mean_logit_shift": 0.2692057192325592,
+      "r2": 0.9773644142232693
+    }
+  ],
+  "native_forward_max_abs_difference": 0.0078125,
+  "fit_plane_r2": 0.9456624936454813,
+  "baseline": {
+    "paper": {
+      "n": 36,
+      "top_month_accuracy": 0.7777777777777778,
+      "top_vocabulary_accuracy": 0.7777777777777778
+    },
+    "paper-after": {
+      "n": 36,
+      "top_month_accuracy": 0.5555555555555556,
+      "top_vocabulary_accuracy": 0.5555555555555556
+    }
+  },
+  "random_subspaces": 6,
+  "paired_examples": 216,
+  "exact": {
+    "prompt": ". Let's do some calendar math. Two months from November is",
+    "original_answer": "January",
+    "target_answer": "February",
+    "probabilities": {
+      "baseline": [
+        0.833618700504303,
+        0.01945226639509201
+      ],
+      "circle": [
+        0.8340083360671997,
+        0.019613996148109436
+      ],
+      "random_mean": [
+        0.8334980010986328,
+        0.01957741193473339
+      ]
+    },
+    "original_top_token": "January",
+    "patched_top_token": "January",
+    "circle_logit_shift": 0.0078125,
+    "random_logit_shift_mean": 0.0065104165114462376
+  },
+  "aggregate_logit_shifts": {
+    "circle": {
+      "mean": 1.2893518209457397,
+      "ci95": [
+        0.9068793833255768,
+        1.739445772767067
+      ]
+    },
+    "random": {
+      "mean": 0.011818214319646358,
+      "ci95": [
+        0.006004051747731864,
+        0.01737022856250405
+      ]
+    },
+    "pc1": {
+      "mean": 0.0036530671641230583,
+      "ci95": [
+        -0.015372270182706416,
+        0.023962404066696766
+      ]
+    }
+  },
+  "circle_minus_random": {
+    "mean": 1.2775336503982544,
+    "ci95": [
+      0.8943159729242325,
+      1.7289333283901216
+    ]
+  }
+}

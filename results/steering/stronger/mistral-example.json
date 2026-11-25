@@ -1,0 +1,153 @@
+{
+  "model": "mlx-community/Mistral-7B-v0.1-q",
+  "revision": "1b5b8ebdb79dcba7d6a8fc002619aaa3043c9f34",
+  "layer_pre_block": 14,
+  "compact_fit": true,
+  "fit_examples": 72,
+  "selected_plane_fit": "all-rows",
+  "calibration_examples": 24,
+  "calibration_style": "paper",
+  "calibration_offsets": [
+    4,
+    9
+  ],
+  "test_styles": [
+    "paper",
+    "paper-after"
+  ],
+  "test_offsets": [
+    2,
+    5,
+    7
+  ],
+  "donor_shifts": [
+    1,
+    -1,
+    3
+  ],
+  "layer_calibration": [
+    {
+      "layer": 2,
+      "fit_method": "all-rows",
+      "mean_logit_shift": 0.1139322891831398,
+      "r2": 0.9309181111326873
+    },
+    {
+      "layer": 2,
+      "fit_method": "centroids",
+      "mean_logit_shift": 0.1129557266831398,
+      "r2": 0.9315099221706521
+    },
+    {
+      "layer": 4,
+      "fit_method": "all-rows",
+      "mean_logit_shift": 0.1604817658662796,
+      "r2": 0.9806782686876624
+    },
+    {
+      "layer": 4,
+      "fit_method": "centroids",
+      "mean_logit_shift": 0.1604817658662796,
+      "r2": 0.9919888787570628
+    },
+    {
+      "layer": 6,
+      "fit_method": "all-rows",
+      "mean_logit_shift": 0.2421875,
+      "r2": 0.9734763191950758
+    },
+    {
+      "layer": 6,
+      "fit_method": "centroids",
+      "mean_logit_shift": 0.2307942658662796,
+      "r2": 0.9781857372447796
+    },
+    {
+      "layer": 8,
+      "fit_method": "all-rows",
+      "mean_logit_shift": 0.2854817807674408,
+      "r2": 0.9743822885918229
+    },
+    {
+      "layer": 8,
+      "fit_method": "centroids",
+      "mean_logit_shift": 0.2731119692325592,
+      "r2": 0.9817992571937842
+    },
+    {
+      "layer": 10,
+      "fit_method": "all-rows",
+      "mean_logit_shift": 0.27734375,
+      "r2": 0.9762356700835974
+    },
+    {
+      "layer": 10,
+      "fit_method": "centroids",
+      "mean_logit_shift": 0.26171875,
+      "r2": 0.9844578407671991
+    },
+    {
+      "layer": 12,
+      "fit_method": "all-rows",
+      "mean_logit_shift": 0.4016927182674408,
+      "r2": 0.956858177819111
+    },
+    {
+      "layer": 12,
+      "fit_method": "centroids",
+      "mean_logit_shift": 0.2740885317325592,
+      "r2": 0.9820057457910907
+    },
+    {
+      "layer": 14,
+      "fit_method": "all-rows",
+      "mean_logit_shift": 0.4036458432674408,
+      "r2": 0.9456624936454813
+    },
+    {
+      "layer": 14,
+      "fit_method": "centroids",
+      "mean_logit_shift": 0.2692057192325592,
+      "r2": 0.9773644142232693
+    }
+  ],
+  "exact": {
+    "prompt": ". Let's do some calendar math. Two months from November is",
+    "original_answer": "January",
+    "target_answer": "February",
+    "probabilities": {
+      "baseline": [
+        0.83455491065979,
+        0.019172195345163345
+      ],
+      "circle": [
+        0.8342207074165344,
+        0.01946631446480751
+      ],
+      "random_mean": [
+        0.833275318145752,
+        0.01962355710566044
+      ]
+    },
+    "original_top_token": "January",
+    "patched_top_token": "January",
+    "circle_logit_shift": 0.015625,
+    "random_logit_shift_mean": 0.02473958395421505,
+    "background_ablation_diagnostic": {
+      "same_month_probabilities": [
+        0.2845844328403473,
+        0.3711680769920349
+      ],
+      "target_month_probabilities": [
+        0.3945046663284302,
+        0.3536317050457001
+      ],
+      "target_vs_same_month_logit_shift": -0.375,
+      "full_donor_probabilities": [
+        0.008429449051618576,
+        0.7952101230621338
+      ],
+      "full_donor_logit_shift": 8.3203125
+    }
+  }
+}

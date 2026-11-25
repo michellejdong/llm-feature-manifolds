@@ -1,5 +1,5 @@
-.experiment/
-.venv/
+/.experiment/
+/.venv/
 __pycache__/
+.ipynb_checkpoints/
 .DS_Store
-*.py[cod]

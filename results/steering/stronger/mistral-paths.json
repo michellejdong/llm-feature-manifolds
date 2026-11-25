@@ -1,0 +1,68 @@
+[
+  {
+    "intermediate_months": 1,
+    "path": "ellipse",
+    "n": 72,
+    "mean_target_gap_change": 0.2390407919883728,
+    "ci95": [
+      0.14377172254025936,
+      0.3788031652569771
+    ],
+    "top_month_target_rate": 0.125
+  },
+  {
+    "intermediate_months": 1,
+    "path": "chord",
+    "n": 72,
+    "mean_target_gap_change": 0.1779513955116272,
+    "ci95": [
+      0.09288194756954908,
+      0.2810330092906952
+    ],
+    "top_month_target_rate": 0.1111111111111111
+  },
+  {
+    "intermediate_months": 1,
+    "path": "norm_matched_chord",
+    "n": 72,
+    "mean_target_gap_change": 0.2074652761220932,
+    "ci95": [
+      0.1153428852558136,
+      0.32617458775639535
+    ],
+    "top_month_target_rate": 0.125
+  },
+  {
+    "intermediate_months": 2,
+    "path": "ellipse",
+    "n": 72,
+    "mean_target_gap_change": 1.3548177480697632,
+    "ci95": [
+      0.8726128906011581,
+      1.9690781831741337
+    ],
+    "top_month_target_rate": 0.1388888888888889
+  },
+  {
+    "intermediate_months": 2,
+    "path": "chord",
+    "n": 72,
+    "mean_target_gap_change": 1.2396918535232544,
+    "ci95": [
+      0.8157334893941879,
+      1.7500569671392443
+    ],
+    "top_month_target_rate": 0.1111111111111111
+  },
+  {
+    "intermediate_months": 2,
+    "path": "norm_matched_chord",
+    "n": 72,
+    "mean_target_gap_change": 1.4545356035232544,
+    "ci95": [
+      0.9381267055869102,
+      2.070301675796509
+    ],
+    "top_month_target_rate": 0.1388888888888889
+  }
+]

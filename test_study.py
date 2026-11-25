@@ -8,6 +8,7 @@ import numpy as np
 from scipy.sparse import csc_matrix
 from scipy.spatial.distance import pdist
 
+from audit_candidates import choose_candidates, shuffle_codes
 from rank import PROJECT, cluster_cloud, document_capped_rows, load_codes, load_groups, loop_scores, score_mode
 from reveal import angular_summary, orient_circle
 
@@ -44,6 +45,25 @@ class GeometryTests(unittest.TestCase):
         docs = np.array([3, 3, 3, 4, 7, 7], dtype=np.uint64)
         np.testing.assert_array_equal(document_capped_rows(codes, docs, 1), [1, 5])
         np.testing.assert_array_equal(document_capped_rows(codes, docs, 2), [1, 2, 4, 5])
+
+    def test_candidate_selection_keeps_corpus_rank_order(self):
+        tables = [
+            {4: {"raw_rank": 1, "prototype_rank": 3}, 8: {"raw_rank": 3, "prototype_rank": 1},
+             138: {"raw_rank": 2, "prototype_rank": 2}, 251: {"raw_rank": 4, "prototype_rank": 4}},
+            {4: {"raw_rank": 2, "prototype_rank": 4}, 8: {"raw_rank": 4, "prototype_rank": 2},
+             138: {"raw_rank": 1, "prototype_rank": 1}, 251: {"raw_rank": 3, "prototype_rank": 3}},
+        ]
+        chosen = [entry for entry in choose_candidates(tables, (1, 1)) if not entry["reference"]]
+        self.assertEqual([(entry["group"], entry["discovery_ranks"]) for entry in chosen], [(4, [1, 2]), (8, [1, 2])])
+
+    def test_shuffle_preserves_occupancy_and_feature_values(self):
+        rng = np.random.default_rng(22)
+        code = rng.normal(size=(64, 16))
+        code[code < 0.8] = 0
+        shuffled, fraction = shuffle_codes(code, rng)
+        self.assertGreater(fraction, 0.3)
+        np.testing.assert_array_equal((code > 0).sum(axis=1), (shuffled > 0).sum(axis=1))
+        np.testing.assert_array_equal(np.sort(code, axis=0), np.sort(shuffled, axis=0))
 
     def test_rotation_reflection_and_translation_align(self):
         labels = np.arange(12)

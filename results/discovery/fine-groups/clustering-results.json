@@ -1,0 +1,116 @@
+{
+  "fit_split": "pile-fit",
+  "sampled_tokens": 150000,
+  "neighbors": 12,
+  "resolution": 5.0,
+  "seed": 20261125,
+  "uses_token_ids": false,
+  "variants": {
+    "decoder": {
+      "n_groups": 1041,
+      "largest_group": 89,
+      "selected_resolution": 80.0,
+      "resolution_sweep": [
+        [
+          5.0,
+          136
+        ],
+        [
+          10.0,
+          239
+        ],
+        [
+          20.0,
+          388
+        ],
+        [
+          40.0,
+          639
+        ],
+        [
+          80.0,
+          1041
+        ]
+      ],
+      "published_overlaps": [
+        {
+          "published_group": 138,
+          "new_group": 367,
+          "shared_features": 9,
+          "published_features": 9,
+          "matched_group_size": 30,
+          "jaccard": 0.3
+        },
+        {
+          "published_group": 251,
+          "new_group": 214,
+          "shared_features": 16,
+          "published_features": 16,
+          "matched_group_size": 40,
+          "jaccard": 0.4
+        },
+        {
+          "published_group": 212,
+          "new_group": 102,
+          "shared_features": 10,
+          "published_features": 10,
+          "matched_group_size": 45,
+          "jaccard": 0.2222222222222222
+        }
+      ]
+    },
+    "joint": {
+      "n_groups": 1053,
+      "largest_group": 80,
+      "selected_resolution": 80.0,
+      "resolution_sweep": [
+        [
+          5.0,
+          138
+        ],
+        [
+          10.0,
+          246
+        ],
+        [
+          20.0,
+          392
+        ],
+        [
+          40.0,
+          646
+        ],
+        [
+          80.0,
+          1053
+        ]
+      ],
+      "published_overlaps": [
+        {
+          "published_group": 138,
+          "new_group": 584,
+          "shared_features": 9,
+          "published_features": 9,
+          "matched_group_size": 28,
+          "jaccard": 0.32142857142857145
+        },
+        {
+          "published_group": 251,
+          "new_group": 208,
+          "shared_features": 16,
+          "published_features": 16,
+          "matched_group_size": 32,
+          "jaccard": 0.5
+        },
+        {
+          "published_group": 212,
+          "new_group": 101,
+          "shared_features": 10,
+          "published_features": 10,
+          "matched_group_size": 45,
+          "jaccard": 0.2222222222222222
+        }
+      ]
+    }
+  }
+}

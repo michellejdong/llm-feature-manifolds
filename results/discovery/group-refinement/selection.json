@@ -1,0 +1,17 @@
+{
+  "fit_splits": [
+    "pile-fit",
+    "wiki-train"
+  ],
+  "fit_shard_limits": [
+    24,
+    20
+  ],
+  "uses_tokens": false,
+  "samples_per_fit_corpus": 2,
+  "points_per_sample": 128,
+  "document_cap": 4,
+  "minimum_fit_gain": 0.02,
+  "seed": 52277,
+  "refined_groups": 548
+}

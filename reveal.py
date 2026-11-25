@@ -28,7 +28,8 @@ CALENDARS = {
          "September", "October", "November", "December"),
     ),
 }
-SPLIT_NAMES = {"pile-fit": "Pile discovery", "pile-holdout": "Pile holdout", "wiki-train": "WikiText"}
+SPLIT_NAMES = {"pile-fit": "Pile discovery", "pile-holdout": "Pile holdout",
+               "wiki-train": "WikiText", "wiki-test": "WikiText test", "news-test": "News test"}
 
 
 def sha256(path: Path) -> str:
@@ -81,6 +82,9 @@ def orient_circle(coordinates: np.ndarray, labels: np.ndarray, classes: int) -> 
 
 
 def angular_summary(points: np.ndarray, labels: np.ndarray, classes: int) -> dict:
+    if not len(labels):
+        return {"labeled_tokens": 0, "counts": [0] * classes, "token_accuracy": None,
+                "token_mae_degrees": None, "centroid_mae_degrees": None}
     estimates = np.angle(points)
     ideal = 2 * np.pi * labels / classes
     errors = np.abs(np.angle(np.exp(1j * (estimates - ideal))))
@@ -173,7 +177,8 @@ def main() -> None:
                 aligned = (complex_points if sign == 1 else np.conj(complex_points)) * phase
                 metrics = angular_summary(aligned, labels, len(names))
                 _, doc_counts = np.unique(documents, return_counts=True)
-                metrics.update(labeled_documents=len(doc_counts), largest_document_fraction=float(doc_counts.max() / len(labels)))
+                metrics.update(labeled_documents=len(doc_counts),
+                               largest_document_fraction=float(doc_counts.max() / len(labels)) if len(doc_counts) else 0.0)
                 metrics.update({k: int(v) for k, v in table[group].items() if k.endswith("_rank")})
                 row = {"concept": title, "group": group, "split": info["split"], "corpus_tokens": info["tokens"]}
                 rows.append(row | {k: v for k, v in metrics.items() if k != "counts"})

@@ -1,0 +1,13 @@
+concept,form,examples,activation_coverage,accuracy_including_inactive,accuracy_given_activation
+Weekdays,full,56,1.0,1.0,1.0
+Weekdays,lowercase,56,0.9821428571428571,0.8214285714285714,0.8363636363636363
+Weekdays,uppercase,56,1.0,0.32142857142857145,0.32142857142857145
+Weekdays,abbreviated,56,0.8571428571428571,0.42857142857142855,0.5
+Weekdays,early,56,1.0,1.0,1.0
+Weekdays,late,56,1.0,1.0,1.0
+Months,full,96,1.0,0.25,0.25
+Months,lowercase,96,0.9375,0.3645833333333333,0.3888888888888889
+Months,uppercase,96,1.0,0.20833333333333334,0.20833333333333334
+Months,abbreviated,96,1.0,0.07291666666666667,0.07291666666666667
+Months,early,96,1.0,0.25,0.25
+Months,late,96,1.0,0.25,0.25

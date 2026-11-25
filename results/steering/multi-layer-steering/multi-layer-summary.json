@@ -1,0 +1,104 @@
+{
+  "model": "mlx-community/Mistral-7B-v0.1-q",
+  "revision": "1b5b8ebdb79dcba7d6a8fc002619aaa3043c9f34",
+  "layers": [
+    8,
+    12,
+    14
+  ],
+  "anchor_layer": 14,
+  "fit_method_by_layer": {
+    "14": "all-rows",
+    "12": "all-rows",
+    "8": "all-rows"
+  },
+  "fit_offsets": [
+    3,
+    6,
+    10
+  ],
+  "test_offsets": [
+    1,
+    2,
+    8,
+    11
+  ],
+  "examples": 48,
+  "random_subspaces": 6,
+  "baseline_top_month_accuracy": 0.9166666666666666,
+  "target_top_month_rate": {
+    "single": 0.020833333333333332,
+    "norm_matched_single": 0.020833333333333332,
+    "three_layers": 0.020833333333333332
+  },
+  "logit_gap_changes": {
+    "single": {
+      "mean": 0.2809244692325592,
+      "ci95": [
+        0.12841796875,
+        0.5431355983018875
+      ]
+    },
+    "norm_matched_single": {
+      "mean": 0.16845703125,
+      "ci95": [
+        0.0890258764848113,
+        0.288090006262064
+      ]
+    },
+    "three_layers": {
+      "mean": 0.32861328125,
+      "ci95": [
+        0.1360677033662796,
+        0.6564168483018875
+      ]
+    },
+    "norm_matched_random": {
+      "mean": 0.00273980014026165,
+      "ci95": [
+        -0.010037570400163532,
+        0.014107260201126341
+      ]
+    }
+  },
+  "three_layer_vs_norm_matched_single_ci95": [
+    0.0419921875,
+    0.36914876326918605
+  ],
+  "three_layer_vs_random_ci95": [
+    0.13196886964142324,
+    0.6585136562585832
+  ],
+  "exact": {
+    "prompt": ". Let's do some calendar math. Two months from November is",
+    "original_answer": "January",
+    "target_answer": "February",
+    "probabilities": {
+      "baseline": [
+        0.833618700504303,
+        0.01945226639509201
+      ],
+      "single": [
+        0.8340083360671997,
+        0.019613996148109436
+      ],
+      "norm_matched_single": [
+        0.8350461721420288,
+        0.019485576078295708
+      ],
+      "three_layers": [
+        0.8282744288444519,
+        0.02057407982647419
+      ],
+      "norm_matched_random": [
+        0.832589328289032,
+        0.019712988287210464
+      ]
+    },
+    "three_layer_norms": [
+      0.20817478001117706,
+      0.027228323742747307,
+      0.11491205543279648
+    ]
+  }
+}

@@ -18,6 +18,9 @@ from extract import device_for
 from rank import activation_shards
 
 
+LOSS_POWERS = {"mse": 0.0, "relative-sqrt": 0.5, "relative-token": 1.0}
+
+
 class TopKSAE(torch.nn.Module):
     def __init__(self, width: int, k: int, dimension: int = 768, block_size: int = 1):
         super().__init__()
@@ -70,18 +73,22 @@ def cache_data(paths: list[Path]) -> np.ndarray:
 
 @torch.inference_mode()
 def evaluate(sae: TopKSAE, rows: np.ndarray, device: str) -> dict:
-    numerator, denominator, active = 0.0, 0.0, 0
+    numerator, denominator, relative, active = 0.0, 0.0, 0.0, 0
     used = np.zeros(len(sae.decoder), dtype=bool)
     for start in range(0, len(rows), 1024):
         batch = torch.from_numpy(rows[start:start + 1024]).to(device, dtype=torch.float32)
         inputs = sae.normalized(batch)
         output, values, indices = sae(inputs)
-        numerator += (inputs - output).square().sum().item()
-        denominator += inputs.square().sum().item()
+        errors = (inputs - output).square().mean(dim=1)
+        strength = inputs.square().mean(dim=1)
+        numerator += errors.sum().item()
+        denominator += strength.sum().item()
+        relative += (errors / strength.clamp_min(0.05)).sum().item()
         live = values.cpu().numpy() > 1e-6
         active += int(live.sum())
         used[indices.cpu().numpy()[live]] = True
     return {"fvu_relative_to_fit_mean": numerator / denominator,
+            "average_relative_token_error": relative / len(rows),
             "mean_nonzero_latents": active / len(rows), "latents_seen": int(used.sum()),
             "evaluation_tokens": len(rows)}
 
@@ -102,6 +109,8 @@ def train(args: argparse.Namespace) -> None:
               "seed": args.seed, "batch_size": args.batch_size, "learning_rate": args.lr}
     if args.block_size > 1:
         config["block_size"] = args.block_size
+    if args.loss != "mse":
+        config["loss"] = args.loss
     metadata = args.output / "config.json"
     if metadata.exists() and json.loads(metadata.read_text()) != config:
         raise ValueError(f"Checkpoint configuration has changed: {metadata}")
@@ -129,6 +138,7 @@ def train(args: argparse.Namespace) -> None:
         raise ValueError(f"Existing checkpoint is already at step {starting_step}")
     history = args.output / "history.jsonl"
     started = time.monotonic()
+    loss_power = LOSS_POWERS[args.loss]
     print(f"TopK SAE width {args.width:,}, block size {args.block_size}, k={args.k}, {len(train_rows):,} fit tokens on {device}", flush=True)
 
     for step in range(starting_step + 1, args.steps + 1):
@@ -137,7 +147,12 @@ def train(args: argparse.Namespace) -> None:
         batch = torch.from_numpy(train_rows[rows]).to(device, dtype=torch.float32)
         inputs = sae.normalized(batch)
         prediction, _, _ = sae(inputs)
-        loss = (prediction - inputs).square().mean()
+        errors = (prediction - inputs).square().mean(dim=1)
+        batch_mse = errors.mean()
+        loss = batch_mse
+        if loss_power:
+            magnitude = inputs.square().mean(dim=1).clamp_min(0.05)
+            loss = (errors / magnitude.pow(loss_power)).mean()
         optimizer.zero_grad(set_to_none=True)
         loss.backward()
         if args.clip_grad:
@@ -146,9 +161,9 @@ def train(args: argparse.Namespace) -> None:
         with torch.no_grad():
             sae.decoder.copy_(torch.nn.functional.normalize(sae.decoder, dim=1))
         if step % 100 == 0:
-            print(f"step {step:,} · MSE {loss.item():.5f} · {time.monotonic() - started:.1f}s", flush=True)
+            print(f"step {step:,} · {args.loss} loss {loss.item():.5f} · {time.monotonic() - started:.1f}s", flush=True)
         if step % args.checkpoint_every == 0 or step == args.steps:
-            result = {"step": step, "train_batch_mse": loss.item(),
+            result = {"step": step, "train_batch_mse": batch_mse.item(), "train_batch_loss": loss.item(),
                       "learning_rate": optimizer.param_groups[0]["lr"], "clip_grad": args.clip_grad,
                       **evaluate(sae, validation, device)}
             print(json.dumps(result), flush=True)
@@ -247,6 +262,7 @@ def main() -> None:
     fit.add_argument("--checkpoint-every", type=int, default=500)
     fit.add_argument("--batch-size", type=int, default=1024)
     fit.add_argument("--lr", type=float, default=0.001)
+    fit.add_argument("--loss", choices=LOSS_POWERS, default="mse")
     fit.add_argument("--resume-lr", type=float)
     fit.add_argument("--clip-grad", type=float, default=0.0)
     encode = cmd.add_parser("encode")

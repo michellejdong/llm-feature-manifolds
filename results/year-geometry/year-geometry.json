@@ -1,0 +1,87 @@
+{
+  "ranking_sha256_before_reveal": {
+    "doc-cap-pile-fit.csv": "4c86a4e8b1a4cb132de4e2233f1bf9a0088b76b3cb04b80c79fc6f1edaa7b4d5",
+    "doc-cap-pile-holdout.csv": "408fb225714223a7327a71397b16b8a50fcd2277020ecf140dd585ca4407b528",
+    "doc-cap-wiki-train.csv": "6f73ba27c980697abeb2921a7ccef3b00df83c31a9274cc24f07d48da8d06a49",
+    "news-doc-cap-4.csv": "3bfd9ba0330d096dede400166c2a4b22514e81ed03dd5ce86575216b04a37d09"
+  },
+  "plane_fitted_on_components": [
+    3,
+    4
+  ],
+  "period_years": 100,
+  "results": [
+    {
+      "split": "pile-fit",
+      "group": 212,
+      "named_tokens": 1804,
+      "distinct_years": 99,
+      "documents": 269,
+      "largest_document_share": 0.0942350332594235,
+      "mean_circular_error_years": 4.4924104813416985,
+      "doc_macro_circular_error_years": 4.530290493525724,
+      "fraction_within_five_years": 0.5504434589800443,
+      "year_centroid_mean_error": 4.524075285630823,
+      "activation_rate_1800s": 1.0,
+      "activation_rate_1900s": 1.0,
+      "activation_rate_2000s": 0.1875460574797347,
+      "raw_rank": 21,
+      "pca23_rank": 358,
+      "prototype_rank": 471
+    },
+    {
+      "split": "pile-holdout",
+      "group": 212,
+      "named_tokens": 557,
+      "distinct_years": 88,
+      "documents": 27,
+      "largest_document_share": 0.44703770197486536,
+      "mean_circular_error_years": 4.4088241766848695,
+      "doc_macro_circular_error_years": 4.858817253410025,
+      "fraction_within_five_years": 0.6032315978456014,
+      "year_centroid_mean_error": 4.869344161848757,
+      "activation_rate_1800s": 1.0,
+      "activation_rate_1900s": 1.0,
+      "activation_rate_2000s": 0.20722891566265061,
+      "raw_rank": 23,
+      "pca23_rank": 486,
+      "prototype_rank": 51
+    },
+    {
+      "split": "wiki-train",
+      "group": 212,
+      "named_tokens": 3491,
+      "distinct_years": 100,
+      "documents": 150,
+      "largest_document_share": 0.05557146949298195,
+      "mean_circular_error_years": 4.662887793115806,
+      "doc_macro_circular_error_years": 4.751647297916166,
+      "fraction_within_five_years": 0.5542824405614437,
+      "year_centroid_mean_error": 4.494431941681111,
+      "activation_rate_1800s": 1.0,
+      "activation_rate_1900s": 1.0,
+      "activation_rate_2000s": 0.2198905109489051,
+      "raw_rank": 690,
+      "pca23_rank": 290,
+      "prototype_rank": 106
+    },
+    {
+      "split": "news-test",
+      "group": 212,
+      "named_tokens": 486,
+      "distinct_years": 81,
+      "documents": 169,
+      "largest_document_share": 0.06790123456790123,
+      "mean_circular_error_years": 4.678706855012031,
+      "doc_macro_circular_error_years": 4.6078211307477925,
+      "fraction_within_five_years": 0.522633744855967,
+      "year_centroid_mean_error": 4.383071781222982,
+      "activation_rate_1800s": 1.0,
+      "activation_rate_1900s": 1.0,
+      "activation_rate_2000s": 0.2938388625592417,
+      "raw_rank": 305,
+      "pca23_rank": 190,
+      "prototype_rank": 261
+    }
+  ]
+}

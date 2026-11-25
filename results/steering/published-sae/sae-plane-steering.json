@@ -1,0 +1,261 @@
+{
+  "model": "mlx-community/Mistral-7B-v0.1-q",
+  "model_revision": "1b5b8ebdb79dcba7d6a8fc002619aaa3043c9f34",
+  "test_offsets": [
+    2,
+    5,
+    7
+  ],
+  "fit": {
+    "checkpoint": "JoshEngels/Mistral-7B-Residual-Stream-SAEs",
+    "checkpoint_revision": "d2d2a64135d2a2c8e7cdfe18c07297af251c744b",
+    "weight_sha256": "342d7c8d26776db7787f4454ade76c2cb973a32ef3434926d9e270d76a1906d0",
+    "features": [
+      7411,
+      33259,
+      49189,
+      46031,
+      9117,
+      57916,
+      26027,
+      16820,
+      41121,
+      23434,
+      39714,
+      59285,
+      47182,
+      22809,
+      17555,
+      52568,
+      8934,
+      16406,
+      63163,
+      15477,
+      54144
+    ],
+    "fit_uses_token_labels": false,
+    "pre_block_layer": 8,
+    "documents_requested": 768,
+    "documents_with_group_activity": 308,
+    "context_tokens": 128,
+    "total_natural_text_tokens": 97536,
+    "fit_points": 707,
+    "fit_loop_score": 0.065559983253479,
+    "active_full_month_names": {
+      "January": 9,
+      "February": 13,
+      "March": 18,
+      "April": 21,
+      "May": 50,
+      "June": 7,
+      "July": 13,
+      "August": 15,
+      "September": 6,
+      "October": 9,
+      "November": 4,
+      "December": 11
+    },
+    "plane_sha256_before_label_reveal": "35ffc37f8347336a71241977b50e0350250c439fe6147373d6ff3d5ba8132505",
+    "pc2_pc3_variance_fraction": 0.31831786036491394
+  },
+  "heldout_input_month_readout": {
+    "labeled_tokens": 72,
+    "counts": [
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6
+    ],
+    "token_accuracy": 0.4444444444444444,
+    "token_mae_degrees": 15.252206024899355,
+    "centroid_mae_degrees": 15.329564091967447
+  },
+  "plane_overlap_with_supervised": 0.3618833957733926,
+  "aggregate": [
+    {
+      "donor_shift": 1,
+      "condition": "natural_text_plane",
+      "mean_target_gap_change": 0.146484375,
+      "ci95": [
+        0.06358507256954908,
+        0.2335177838802338
+      ],
+      "mean_norm": 0.21850061416625977,
+      "vocabulary_target_top_rate": 0.09722222222222222
+    },
+    {
+      "donor_shift": 1,
+      "condition": "direct_sae_edit",
+      "mean_target_gap_change": 0.1251085102558136,
+      "ci95": [
+        0.0579427145421505,
+        0.1933648005127907
+      ],
+      "mean_norm": 0.19185850024223328,
+      "vocabulary_target_top_rate": 0.1111111111111111
+    },
+    {
+      "donor_shift": 1,
+      "condition": "supervised_plane_equal_norm",
+      "mean_target_gap_change": 0.1778428852558136,
+      "ci95": [
+        0.10132921095937492,
+        0.2817979767918587
+      ],
+      "mean_norm": 0.2185006198576755,
+      "vocabulary_target_top_rate": 0.125
+    },
+    {
+      "donor_shift": 1,
+      "condition": "random_plane_equal_norm",
+      "mean_target_gap_change": 0.0042317770421504974,
+      "ci95": [
+        -0.0016099534346722066,
+        0.009856050135567784
+      ],
+      "mean_norm": 0.21850061416625977,
+      "vocabulary_target_top_rate": 0.08564814814814817
+    },
+    {
+      "donor_shift": 1,
+      "condition": "full_donor",
+      "mean_target_gap_change": 3.8704426288604736,
+      "ci95": [
+        3.551393932104111,
+        4.1713377952575685
+      ],
+      "mean_norm": 0.9596015214920044,
+      "vocabulary_target_top_rate": 0.6805555555555556
+    },
+    {
+      "donor_shift": 3,
+      "condition": "natural_text_plane",
+      "mean_target_gap_change": 1.9315321445465088,
+      "ci95": [
+        0.8169677928090096,
+        3.192730313539505
+      ],
+      "mean_norm": 0.5250034928321838,
+      "vocabulary_target_top_rate": 0.041666666666666664
+    },
+    {
+      "donor_shift": 3,
+      "condition": "direct_sae_edit",
+      "mean_target_gap_change": 1.4992947578430176,
+      "ci95": [
+        0.6166843309998513,
+        2.566693872213364
+      ],
+      "mean_norm": 0.44700855016708374,
+      "vocabulary_target_top_rate": 0.0
+    },
+    {
+      "donor_shift": 3,
+      "condition": "supervised_plane_equal_norm",
+      "mean_target_gap_change": 1.5210503339767456,
+      "ci95": [
+        0.9772583067417144,
+        2.076409310102463
+      ],
+      "mean_norm": 0.5250034977992376,
+      "vocabulary_target_top_rate": 0.0
+    },
+    {
+      "donor_shift": 3,
+      "condition": "random_plane_equal_norm",
+      "mean_target_gap_change": 0.058006007224321365,
+      "ci95": [
+        0.03529890961945057,
+        0.07954530492424965
+      ],
+      "mean_norm": 0.5250034928321838,
+      "vocabulary_target_top_rate": 0.0
+    },
+    {
+      "donor_shift": 3,
+      "condition": "full_donor",
+      "mean_target_gap_change": 10.04551887512207,
+      "ci95": [
+        9.732744383811951,
+        10.429944682121278
+      ],
+      "mean_norm": 1.3029162883758545,
+      "vocabulary_target_top_rate": 0.6527777777777778
+    }
+  ],
+  "exact": [
+    {
+      "donor_shift": 1,
+      "condition": "natural_text_plane",
+      "frame": "paper",
+      "source_month": "November",
+      "offset": 2,
+      "target_answer": "February",
+      "edit_norm": 0.2044571489095688,
+      "target_logit_gap_change": 0.0703125,
+      "target_probability": 0.02087811380624771,
+      "base_target_probability": 0.01945226639509201,
+      "vocabulary_target_top_rate": 0.0
+    },
+    {
+      "donor_shift": 1,
+      "condition": "direct_sae_edit",
+      "frame": "paper",
+      "source_month": "November",
+      "offset": 2,
+      "target_answer": "February",
+      "edit_norm": 0.26414451003074646,
+      "target_logit_gap_change": 0.1171875,
+      "target_probability": 0.0218780729919672,
+      "base_target_probability": 0.01945226639509201,
+      "vocabulary_target_top_rate": 0.0
+    },
+    {
+      "donor_shift": 1,
+      "condition": "supervised_plane_equal_norm",
+      "frame": "paper",
+      "source_month": "November",
+      "offset": 2,
+      "target_answer": "February",
+      "edit_norm": 0.2044571489095688,
+      "target_logit_gap_change": 0.125,
+      "target_probability": 0.02174440771341324,
+      "base_target_probability": 0.01945226639509201,
+      "vocabulary_target_top_rate": 0.0
+    },
+    {
+      "donor_shift": 1,
+      "condition": "random_plane_equal_norm",
+      "frame": "paper",
+      "source_month": "November",
+      "offset": 2,
+      "target_answer": "February",
+      "edit_norm": 0.2044571489095688,
+      "target_logit_gap_change": -0.005208253860473633,
+      "target_probability": 0.01934768073260784,
+      "base_target_probability": 0.01945226639509201,
+      "vocabulary_target_top_rate": 0.0
+    },
+    {
+      "donor_shift": 1,
+      "condition": "full_donor",
+      "frame": "paper",
+      "source_month": "November",
+      "offset": 2,
+      "target_answer": "February",
+      "edit_norm": 0.932698130607605,
+      "target_logit_gap_change": 8.328125,
+      "target_probability": 0.7918682098388672,
+      "base_target_probability": 0.01945226639509201,
+      "vocabulary_target_top_rate": 1.0
+    }
+  ]
+}

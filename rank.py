@@ -16,10 +16,11 @@ from scipy.spatial.distance import pdist, squareform
 from sklearn.cluster import KMeans
 from threadpoolctl import threadpool_limits
 
+from geometry_metrics import adjacent_pc_planes, irreducibility
 
 PROJECT = Path(__file__).resolve().parent
 MODES = ("raw", "unit", "transverse")
-ADDITIONAL_MODES = ("pca23", "shell", "annulus", "prototype")
+ADDITIONAL_MODES = ("pca23", "shell", "annulus", "prototype", "pca-adjacent", "irreducibility")
 
 
 def activation_shards(folder: Path, max_shards: int) -> list[Path]:
@@ -214,6 +215,10 @@ def score_mode(points: np.ndarray, mode: str) -> tuple[float, float, float]:
         return 0.0, 0.0, 0.0
     if mode == "annulus":
         return annulus_score(points), 0.0, 0.0
+    if mode == "pca-adjacent":
+        return max((loop_scores(xy) for xy in adjacent_pc_planes(points)), default=(0.0, 0.0, 0.0))
+    if mode == "irreducibility":
+        return irreducibility(points), 0.0, 0.0
     if mode == "prototype":
         plane = geometry(points, "pca23")
         if len(plane) < 12 or plane.shape[1] < 2:
@@ -238,7 +243,7 @@ def scores_for_group(points: np.ndarray, controls: int, modes: list[str], rng: n
     for mode in modes:
         score, birth, death = score_mode(points, mode)
         result = {f"{mode}_score": score}
-        if mode != "annulus":
+        if mode not in ("annulus", "irreducibility"):
             result |= {f"{mode}_birth": birth, f"{mode}_death": death}
         if controls:
             null = [score_mode(sample, mode)[0] for sample in reference]

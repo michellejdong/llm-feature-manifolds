@@ -1,0 +1,8 @@
+{
+  "step": 2500,
+  "fvu_relative_to_fit_mean": 0.01530642483243732,
+  "average_relative_token_error": 0.254596084356308,
+  "mean_nonzero_latents": 32.0,
+  "latents_seen": 2983,
+  "evaluation_tokens": 24576
+}

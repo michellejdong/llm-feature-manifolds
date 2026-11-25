@@ -1,0 +1,12 @@
+{
+  "fit": "pile-fit",
+  "validation": "pile-holdout",
+  "fit_tokens": 1281337,
+  "validation_shards": 6,
+  "width": 3072,
+  "k": 32,
+  "seed": 20261125,
+  "batch_size": 1024,
+  "learning_rate": 0.001,
+  "block_size": 4
+}

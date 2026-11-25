@@ -1,0 +1,6 @@
+numpy==2.2.6
+scipy==1.15.3
+matplotlib==3.10.3
+ripser==0.6.12
+torch==2.8.0
+ipykernel==7.4.0

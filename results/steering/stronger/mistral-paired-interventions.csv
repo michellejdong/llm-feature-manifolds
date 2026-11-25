@@ -1,0 +1,217 @@
+prompt_style,prompt,start_month,offset,donor_shift,donor_month,original_answer,target_answer,baseline_top_month,patched_top_month,circle_logit_shift,random_mean_shift,top_pc_shift,full_patch_shift,perturbation_norm
+paper,. Let's do some calendar math. Two months from January is,January,2,1,February,March,April,March,March,0.2109375,-0.02734375,-0.0234375,8.234375,0.2493906896505792
+paper,. Let's do some calendar math. Two months from February is,February,2,1,March,April,May,April,April,-0.0234375,-0.0052083334885537624,0.0625,8.484375,0.6916474996246444
+paper,. Let's do some calendar math. Two months from March is,March,2,1,April,May,June,May,May,0.1171875,0.0078125,0.0234375,8.75,0.3404334830277343
+paper,. Let's do some calendar math. Two months from April is,April,2,1,May,June,July,June,June,0.21875,0.014322916977107525,-0.0078125,7.65625,0.4835246265645188
+paper,. Let's do some calendar math. Two months from May is,May,2,1,June,July,August,July,July,0.03125,0.0026041667442768812,-0.015625,9.109375,0.36285600303153265
+paper,. Let's do some calendar math. Two months from June is,June,2,1,July,August,September,August,August,0.1015625,0.01171875,-0.0078125,8.546875,0.26978163212674233
+paper,. Let's do some calendar math. Two months from July is,July,2,1,August,September,October,September,September,0.1328125,-0.0052083334885537624,0.015625,9.515625,0.33413752316329326
+paper,. Let's do some calendar math. Two months from August is,August,2,1,September,October,November,October,October,0.2734375,0.01692708395421505,0.0390625,8.6171875,0.5039627599026257
+paper,. Let's do some calendar math. Two months from September is,September,2,1,October,November,December,November,November,0.171875,0.014322916977107525,0.046875,7.9453125,0.36092018340628573
+paper,. Let's do some calendar math. Two months from October is,October,2,1,November,December,January,December,December,0.171875,-0.009114583022892475,-0.03125,9.4140625,0.27698059928042573
+paper,. Let's do some calendar math. Two months from November is,November,2,1,December,January,February,January,January,0.0078125,0.0065104165114462376,-0.0078125,8.3046875,0.238897371799119
+paper,. Let's do some calendar math. Two months from December is,December,2,1,January,February,March,February,February,0.96875,0.0716145858168602,0.0234375,9.09375,0.8989978073886347
+paper,. Let's do some calendar math. Five months from January is,January,5,1,February,June,July,June,June,-0.0078125,0.0013020833721384406,-0.015625,5.125,0.16519308669036661
+paper,. Let's do some calendar math. Five months from February is,February,5,1,March,July,August,July,July,0.53125,-0.013020833022892475,0.109375,5.7578125,0.7198502096696715
+paper,. Let's do some calendar math. Five months from March is,March,5,1,April,August,September,August,August,0.125,-0.00390625,0.0625,5.8359375,0.3652566437674057
+paper,. Let's do some calendar math. Five months from April is,April,5,1,May,September,October,September,September,0.484375,0.02083333395421505,-0.015625,4.296875,0.49203765778859615
+paper,. Let's do some calendar math. Five months from May is,May,5,1,June,October,November,October,October,0.3671875,0.00390625,0.0234375,3.0859375,0.3701136573210389
+paper,. Let's do some calendar math. Five months from June is,June,5,1,July,November,December,November,November,0.1796875,0.02083333395421505,-0.0078125,3.203125,0.2655706455492552
+paper,. Let's do some calendar math. Five months from July is,July,5,1,August,December,January,December,December,0.171875,-0.00390625,0.015625,2.5859375,0.3584465106914157
+paper,. Let's do some calendar math. Five months from August is,August,5,1,September,January,February,January,January,0.4296875,-0.02604166604578495,0.0234375,2.71875,0.5473578163975436
+paper,. Let's do some calendar math. Five months from September is,September,5,1,October,February,March,February,February,0.3984375,0.04296875,0.0,3.5,0.3622073535575619
+paper,. Let's do some calendar math. Five months from October is,October,5,1,November,March,April,March,March,0.4609375,0.01953125,0.03125,5.3828125,0.30711464274177225
+paper,. Let's do some calendar math. Five months from November is,November,5,1,December,April,May,April,April,0.1796875,-0.0065104165114462376,0.0,4.859375,0.2905668177510043
+paper,. Let's do some calendar math. Five months from December is,December,5,1,January,May,June,May,June,4.7109375,-0.015625,0.125,3.2421875,0.9795729493262396
+paper,. Let's do some calendar math. Seven months from January is,January,7,1,February,August,September,July,July,0.0078125,0.0,0.0078125,1.7734375,0.2141002839547363
+paper,. Let's do some calendar math. Seven months from February is,February,7,1,March,September,October,August,October,0.9296875,0.03515625,-0.1015625,0.9921875,0.7473235919801365
+paper,. Let's do some calendar math. Seven months from March is,March,7,1,April,October,November,October,October,0.1875,-0.0078125,0.0546875,1.7421875,0.3676768974786291
+paper,. Let's do some calendar math. Seven months from April is,April,7,1,May,November,December,October,October,0.3359375,-0.0078125,-0.0234375,2.421875,0.4987103876921855
+paper,. Let's do some calendar math. Seven months from May is,May,7,1,June,December,January,December,December,0.3046875,-0.0013020833721384406,0.0078125,2.109375,0.373751101721255
+paper,. Let's do some calendar math. Seven months from June is,June,7,1,July,January,February,January,January,0.3203125,0.00390625,0.0,2.4140625,0.2883022508781631
+paper,. Let's do some calendar math. Seven months from July is,July,7,1,August,February,March,January,January,0.203125,0.0026041667442768812,0.03125,1.34375,0.35487196217619155
+paper,. Let's do some calendar math. Seven months from August is,August,7,1,September,March,April,February,February,0.3515625,0.010416666977107525,-0.0390625,1.59375,0.5636138685344318
+paper,. Let's do some calendar math. Seven months from September is,September,7,1,October,April,May,March,March,0.03125,0.0078125,-0.0546875,0.5,0.3307443957239463
+paper,. Let's do some calendar math. Seven months from October is,October,7,1,November,May,June,April,April,0.2421875,-0.00390625,-0.015625,3.46875,0.3054647609849035
+paper,. Let's do some calendar math. Seven months from November is,November,7,1,December,June,July,June,June,0.296875,0.0013020833721384406,0.0078125,3.5625,0.2928986738129571
+paper,. Let's do some calendar math. Seven months from December is,December,7,1,January,July,August,June,August,4.4140625,0.01171875,-0.0390625,2.7578125,0.9668134003628651
+paper-after,Let's do some calendar math. Two months after January is,January,2,1,February,March,April,March,March,0.1875,-0.014322916977107525,-0.0234375,8.0390625,0.3081622877956598
+paper-after,Let's do some calendar math. Two months after February is,February,2,1,March,April,May,April,April,-0.015625,0.0052083334885537624,-0.0234375,7.3984375,0.587035226011608
+paper-after,Let's do some calendar math. Two months after March is,March,2,1,April,May,June,May,May,0.140625,-0.01171875,-0.0234375,7.046875,0.34142981467247074
+paper-after,Let's do some calendar math. Two months after April is,April,2,1,May,June,July,June,June,0.265625,0.015625,-0.0546875,6.3046875,0.4477405368295609
+paper-after,Let's do some calendar math. Two months after May is,May,2,1,June,July,August,July,July,0.046875,-0.0013020833721384406,0.0078125,8.46875,0.3558328285579334
+paper-after,Let's do some calendar math. Two months after June is,June,2,1,July,August,September,August,August,0.09375,0.0026041667442768812,0.0078125,7.09375,0.2298573122956305
+paper-after,Let's do some calendar math. Two months after July is,July,2,1,August,September,October,September,September,0.1328125,0.0078125,-0.015625,7.4375,0.3140055991284959
+paper-after,Let's do some calendar math. Two months after August is,August,2,1,September,October,November,October,October,0.2109375,0.02473958395421505,0.0703125,7.0,0.4106848608586165
+paper-after,Let's do some calendar math. Two months after September is,September,2,1,October,November,December,November,November,0.15625,0.0325520820915699,0.0078125,5.9140625,0.32877806340875093
+paper-after,Let's do some calendar math. Two months after October is,October,2,1,November,December,January,December,December,0.0859375,-0.0065104165114462376,0.0,7.921875,0.2697520645811855
+paper-after,Let's do some calendar math. Two months after November is,November,2,1,December,January,February,January,January,0.0234375,0.009114583022892475,-0.0078125,7.1953125,0.21823656062121508
+paper-after,Let's do some calendar math. Two months after December is,December,2,1,January,February,March,February,April,0.375,0.0442708320915699,-0.03125,7.765625,0.8048008445656627
+paper-after,Let's do some calendar math. Five months after January is,January,5,1,February,June,July,June,June,0.0625,-0.013020833022892475,-0.0234375,1.8203125,0.28128518599576435
+paper-after,Let's do some calendar math. Five months after February is,February,5,1,March,July,August,July,July,0.109375,0.0013020833721384406,0.0859375,2.875,0.6027820136734707
+paper-after,Let's do some calendar math. Five months after March is,March,5,1,April,August,September,August,August,0.1015625,-0.009114583022892475,-0.0078125,0.4453125,0.3440707775751687
+paper-after,Let's do some calendar math. Five months after April is,April,5,1,May,September,October,October,October,0.0078125,0.0,0.015625,-0.4140625,0.44970887479846267
+paper-after,Let's do some calendar math. Five months after May is,May,5,1,June,October,November,October,October,0.0,0.00390625,0.0703125,1.28125,0.3566874155037734
+paper-after,Let's do some calendar math. Five months after June is,June,5,1,July,November,December,December,December,0.0390625,-0.01171875,0.0078125,-0.234375,0.2204243088411967
+paper-after,Let's do some calendar math. Five months after July is,July,5,1,August,December,January,January,January,0.0859375,-0.009114583022892475,-0.0234375,-0.4921875,0.3286758957479719
+paper-after,Let's do some calendar math. Five months after August is,August,5,1,September,January,February,February,February,0.0546875,0.013020833022892475,0.0234375,-0.671875,0.4268765211076893
+paper-after,Let's do some calendar math. Five months after September is,September,5,1,October,February,March,April,April,0.0703125,0.014322916977107525,-0.0546875,-0.7734375,0.3083528634620548
+paper-after,Let's do some calendar math. Five months after October is,October,5,1,November,March,April,April,April,0.0390625,0.0065104165114462376,-0.0234375,-0.2734375,0.2570032297608792
+paper-after,Let's do some calendar math. Five months after November is,November,5,1,December,April,May,May,May,0.1015625,-0.0013020833721384406,0.0390625,1.546875,0.2450748676861339
+paper-after,Let's do some calendar math. Five months after December is,December,5,1,January,May,June,May,June,1.2578125,0.02213541604578495,0.0546875,1.2265625,0.8484191272266458
+paper-after,Let's do some calendar math. Seven months after January is,January,7,1,February,August,September,July,July,0.015625,0.010416666977107525,-0.0078125,0.515625,0.29629103677022967
+paper-after,Let's do some calendar math. Seven months after February is,February,7,1,March,September,October,August,September,-0.15625,-0.013020833022892475,0.0234375,2.109375,0.6044951557315023
+paper-after,Let's do some calendar math. Seven months after March is,March,7,1,April,October,November,October,October,0.0390625,-0.010416666977107525,0.015625,0.03125,0.3456163476542289
+paper-after,Let's do some calendar math. Seven months after April is,April,7,1,May,November,December,October,October,-0.046875,-0.0052083334885537624,-0.0078125,-0.3359375,0.4497163398785224
+paper-after,Let's do some calendar math. Seven months after May is,May,7,1,June,December,January,November,November,0.09375,0.0026041667442768812,-0.0234375,0.640625,0.3622866268210097
+paper-after,Let's do some calendar math. Seven months after June is,June,7,1,July,January,February,December,December,0.0546875,0.0052083334885537624,-0.0234375,0.7890625,0.23030189589852557
+paper-after,Let's do some calendar math. Seven months after July is,July,7,1,August,February,March,January,January,0.140625,0.010416666977107525,0.015625,-0.234375,0.32235538996379537
+paper-after,Let's do some calendar math. Seven months after August is,August,7,1,September,March,April,May,May,0.09375,0.009114583022892475,0.03125,-0.359375,0.47655718906552763
+paper-after,Let's do some calendar math. Seven months after September is,September,7,1,October,April,May,June,June,0.2109375,0.009114583022892475,-0.0078125,0.0390625,0.27841657200438924
+paper-after,Let's do some calendar math. Seven months after October is,October,7,1,November,May,June,July,July,0.0546875,0.00390625,-0.0234375,-0.03125,0.2579837768860812
+paper-after,Let's do some calendar math. Seven months after November is,November,7,1,December,June,July,June,June,0.1015625,0.010416666977107525,0.0,1.2578125,0.2437940419036487
+paper-after,Let's do some calendar math. Seven months after December is,December,7,1,January,July,August,July,July,1.6640625,-0.01171875,0.0234375,1.6171875,0.8543582632323047
+paper,. Let's do some calendar math. Two months from January is,January,2,-1,December,March,February,March,March,1.1171875,0.08203125,-0.1328125,8.5,0.8989978073886347
+paper,. Let's do some calendar math. Two months from February is,February,2,-1,January,April,March,April,April,0.0234375,-0.01171875,0.0234375,8.1953125,0.2493906896505792
+paper,. Let's do some calendar math. Two months from March is,March,2,-1,February,May,April,May,May,0.1484375,0.0455729179084301,-0.0703125,8.984375,0.6916474996246444
+paper,. Let's do some calendar math. Two months from April is,April,2,-1,March,June,May,June,June,0.21875,-0.00390625,-0.03125,8.8828125,0.3404334830277343
+paper,. Let's do some calendar math. Two months from May is,May,2,-1,April,July,June,July,July,0.328125,0.0065104165114462376,0.046875,7.6796875,0.4835246265645188
+paper,. Let's do some calendar math. Two months from June is,June,2,-1,May,August,July,August,August,0.171875,0.01171875,0.0234375,8.921875,0.36285600303153265
+paper,. Let's do some calendar math. Two months from July is,July,2,-1,June,September,August,September,September,0.1484375,0.0052083334885537624,0.0390625,8.3203125,0.26978163212674233
+paper,. Let's do some calendar math. Two months from August is,August,2,-1,July,October,September,October,October,0.03125,0.0,-0.0234375,9.8671875,0.33413752316329326
+paper,. Let's do some calendar math. Two months from September is,September,2,-1,August,November,October,November,November,0.2734375,0.02213541604578495,0.046875,8.6796875,0.5039627599026257
+paper,. Let's do some calendar math. Two months from October is,October,2,-1,September,December,November,December,December,0.25,0.0,-0.015625,8.0078125,0.36092018340628573
+paper,. Let's do some calendar math. Two months from November is,November,2,-1,October,January,December,January,January,0.125,-0.015625,0.0546875,9.3046875,0.27698059928042573
+paper,. Let's do some calendar math. Two months from December is,December,2,-1,November,February,January,February,February,-0.03125,0.01171875,0.0234375,8.390625,0.238897371799119
+paper,. Let's do some calendar math. Five months from January is,January,5,-1,December,June,May,June,May,2.15625,0.07421875,0.0,3.0859375,0.9795729493262396
+paper,. Let's do some calendar math. Five months from February is,February,5,-1,January,July,June,July,July,0.125,-0.0013020833721384406,-0.0390625,5.265625,0.16519308669036661
+paper,. Let's do some calendar math. Five months from March is,March,5,-1,February,August,July,August,August,0.96875,0.02734375,-0.0390625,5.6953125,0.7198502096696715
+paper,. Let's do some calendar math. Five months from April is,April,5,-1,March,September,August,September,September,0.4921875,-0.014322916977107525,-0.0625,5.953125,0.3652566437674057
+paper,. Let's do some calendar math. Five months from May is,May,5,-1,April,October,September,October,October,0.65625,0.05859375,-0.0234375,4.3984375,0.49203765778859615
+paper,. Let's do some calendar math. Five months from June is,June,5,-1,May,November,October,November,October,0.265625,-0.00390625,0.0078125,2.875,0.3701136573210389
+paper,. Let's do some calendar math. Five months from July is,July,5,-1,June,December,November,December,December,0.25,-0.0078125,0.0,3.234375,0.2655706455492552
+paper,. Let's do some calendar math. Five months from August is,August,5,-1,July,January,December,January,January,0.2109375,0.0,0.0,2.734375,0.3584465106914157
+paper,. Let's do some calendar math. Five months from September is,September,5,-1,August,February,January,February,February,0.5390625,0.0494791679084301,-0.0390625,2.8203125,0.5473578163975436
+paper,. Let's do some calendar math. Five months from October is,October,5,-1,September,March,February,March,March,0.578125,-0.0026041667442768812,0.0,3.171875,0.3622073535575619
+paper,. Let's do some calendar math. Five months from November is,November,5,-1,October,April,March,April,April,0.1484375,0.015625,-0.0078125,5.4765625,0.30711464274177225
+paper,. Let's do some calendar math. Five months from December is,December,5,-1,November,May,April,May,May,0.265625,0.00390625,-0.0234375,4.921875,0.2905668177510043
+paper,. Let's do some calendar math. Seven months from January is,January,7,-1,December,August,July,July,July,2.03125,-0.0755208358168602,0.0859375,2.5234375,0.9668134003628651
+paper,. Let's do some calendar math. Seven months from February is,February,7,-1,January,September,August,August,August,0.3984375,0.0052083334885537624,-0.125,1.5859375,0.2141002839547363
+paper,. Let's do some calendar math. Seven months from March is,March,7,-1,February,October,September,October,October,0.453125,-0.02213541604578495,0.1796875,1.2421875,0.7473235919801365
+paper,. Let's do some calendar math. Seven months from April is,April,7,-1,March,November,October,October,October,0.2890625,0.009114583022892475,0.046875,1.7109375,0.3676768974786291
+paper,. Let's do some calendar math. Seven months from May is,May,7,-1,April,December,November,December,December,0.3671875,0.0078125,-0.0390625,2.59375,0.4987103876921855
+paper,. Let's do some calendar math. Seven months from June is,June,7,-1,May,January,December,January,January,0.3203125,0.0026041667442768812,-0.0078125,1.921875,0.373751101721255
+paper,. Let's do some calendar math. Seven months from July is,July,7,-1,June,February,January,January,January,0.4296875,-0.0234375,-0.046875,2.3046875,0.2883022508781631
+paper,. Let's do some calendar math. Seven months from August is,August,7,-1,July,March,February,February,February,0.234375,-0.03125,0.0703125,1.6875,0.35487196217619155
+paper,. Let's do some calendar math. Seven months from September is,September,7,-1,August,April,March,March,March,1.8046875,0.1015625,0.2890625,1.4375,0.5636138685344318
+paper,. Let's do some calendar math. Seven months from October is,October,7,-1,September,May,April,April,April,0.59375,-0.013020833022892475,0.046875,-0.0078125,0.3307443957239463
+paper,. Let's do some calendar math. Seven months from November is,November,7,-1,October,June,May,June,June,0.625,-0.014322916977107525,0.0234375,3.734375,0.3054647609849035
+paper,. Let's do some calendar math. Seven months from December is,December,7,-1,November,July,June,June,June,0.4140625,0.0403645820915699,-0.125,3.2109375,0.2928986738129571
+paper-after,Let's do some calendar math. Two months after January is,January,2,-1,December,March,February,March,March,0.4609375,-0.0065104165114462376,-0.078125,7.6640625,0.8048008445656627
+paper-after,Let's do some calendar math. Two months after February is,February,2,-1,January,April,March,April,April,0.0,0.0013020833721384406,0.03125,8.203125,0.3081622877956598
+paper-after,Let's do some calendar math. Two months after March is,March,2,-1,February,May,April,May,May,0.25,0.010416666977107525,-0.125,7.09375,0.587035226011608
+paper-after,Let's do some calendar math. Two months after April is,April,2,-1,March,June,May,June,June,0.2734375,-0.0065104165114462376,-0.0703125,5.8203125,0.34142981467247074
+paper-after,Let's do some calendar math. Two months after May is,May,2,-1,April,July,June,July,July,0.296875,-0.0065104165114462376,-0.0859375,7.09375,0.4477405368295609
+paper-after,Let's do some calendar math. Two months after June is,June,2,-1,May,August,July,August,August,0.15625,0.013020833022892475,0.0234375,7.8125,0.3558328285579334
+paper-after,Let's do some calendar math. Two months after July is,July,2,-1,June,September,August,September,September,0.0703125,-0.01822916604578495,0.0390625,6.9453125,0.2298573122956305
+paper-after,Let's do some calendar math. Two months after August is,August,2,-1,July,October,September,October,October,0.046875,-0.010416666977107525,-0.0625,7.421875,0.3140055991284959
+paper-after,Let's do some calendar math. Two months after September is,September,2,-1,August,November,October,November,November,0.140625,-0.0234375,0.0234375,7.375,0.4106848608586165
+paper-after,Let's do some calendar math. Two months after October is,October,2,-1,September,December,November,December,December,0.1171875,0.0065104165114462376,-0.0234375,6.46875,0.32877806340875093
+paper-after,Let's do some calendar math. Two months after November is,November,2,-1,October,January,December,January,January,0.109375,0.00390625,-0.0546875,8.078125,0.2697520645811855
+paper-after,Let's do some calendar math. Two months after December is,December,2,-1,November,February,January,February,February,0.0,0.0026041667442768812,0.0,7.2109375,0.21823656062121508
+paper-after,Let's do some calendar math. Five months after January is,January,5,-1,December,June,May,June,May,0.7890625,0.0794270858168602,-0.0078125,0.796875,0.8484191272266458
+paper-after,Let's do some calendar math. Five months after February is,February,5,-1,January,July,June,July,July,-0.0390625,0.0,0.03125,3.109375,0.28128518599576435
+paper-after,Let's do some calendar math. Five months after March is,March,5,-1,February,August,July,August,August,0.2734375,0.0065104165114462376,0.0078125,0.8203125,0.6027820136734707
+paper-after,Let's do some calendar math. Five months after April is,April,5,-1,March,September,August,October,October,0.09375,0.01171875,-0.015625,-0.09375,0.3440707775751687
+paper-after,Let's do some calendar math. Five months after May is,May,5,-1,April,October,September,October,October,0.1796875,0.02864583395421505,0.015625,0.4453125,0.44970887479846267
+paper-after,Let's do some calendar math. Five months after June is,June,5,-1,May,November,October,December,December,0.0859375,0.01171875,0.0546875,0.5625,0.3566874155037734
+paper-after,Let's do some calendar math. Five months after July is,July,5,-1,June,December,November,January,January,0.0,-0.010416666977107525,0.015625,-0.5,0.2204243088411967
+paper-after,Let's do some calendar math. Five months after August is,August,5,-1,July,January,December,February,December,0.0078125,0.0065104165114462376,0.0078125,-0.4375,0.3286758957479719
+paper-after,Let's do some calendar math. Five months after September is,September,5,-1,August,February,January,April,January,0.046875,-0.009114583022892475,-0.0390625,-0.6875,0.4268765211076893
+paper-after,Let's do some calendar math. Five months after October is,October,5,-1,September,March,February,April,April,0.09375,0.010416666977107525,-0.046875,-0.7734375,0.3083528634620548
+paper-after,Let's do some calendar math. Five months after November is,November,5,-1,October,April,March,May,May,-0.09375,-0.0026041667442768812,-0.0234375,0.1875,0.2570032297608792
+paper-after,Let's do some calendar math. Five months after December is,December,5,-1,November,May,April,May,May,0.0234375,0.010416666977107525,0.0234375,1.6953125,0.2450748676861339
+paper-after,Let's do some calendar math. Seven months after January is,January,7,-1,December,August,July,July,July,0.640625,-0.0052083334885537624,-0.1015625,1.4765625,0.8543582632323047
+paper-after,Let's do some calendar math. Seven months after February is,February,7,-1,January,September,August,August,August,0.0703125,0.01692708395421505,-0.0078125,1.171875,0.29629103677022967
+paper-after,Let's do some calendar math. Seven months after March is,March,7,-1,February,October,September,October,October,0.1015625,-0.0234375,0.0,0.90625,0.6044951557315023
+paper-after,Let's do some calendar math. Seven months after April is,April,7,-1,March,November,October,October,October,0.0,-0.00390625,-0.03125,-0.296875,0.3456163476542289
+paper-after,Let's do some calendar math. Seven months after May is,May,7,-1,April,December,November,November,November,0.125,0.013020833022892475,-0.046875,0.1171875,0.4497163398785224
+paper-after,Let's do some calendar math. Seven months after June is,June,7,-1,May,January,December,December,December,0.1875,0.02864583395421505,0.0234375,0.5078125,0.3622866268210097
+paper-after,Let's do some calendar math. Seven months after July is,July,7,-1,June,February,January,January,January,0.0546875,0.0013020833721384406,0.0,0.640625,0.23030189589852557
+paper-after,Let's do some calendar math. Seven months after August is,August,7,-1,July,March,February,May,February,0.0546875,0.0078125,0.03125,-0.3515625,0.32235538996379537
+paper-after,Let's do some calendar math. Seven months after September is,September,7,-1,August,April,March,June,April,0.1953125,-0.0026041667442768812,-0.046875,-0.1015625,0.47655718906552763
+paper-after,Let's do some calendar math. Seven months after October is,October,7,-1,September,May,April,July,July,0.046875,-0.0052083334885537624,-0.0078125,-0.3828125,0.27841657200438924
+paper-after,Let's do some calendar math. Seven months after November is,November,7,-1,October,June,May,June,June,0.0234375,0.01953125,-0.0078125,0.5625,0.2579837768860812
+paper-after,Let's do some calendar math. Seven months after December is,December,7,-1,November,July,June,July,July,0.0234375,0.0065104165114462376,-0.0078125,1.3984375,0.2437940419036487
+paper,. Let's do some calendar math. Two months from January is,January,2,3,April,March,June,March,March,0.7890625,-0.0638020858168602,0.015625,12.828125,0.8354330621406016
+paper,. Let's do some calendar math. Two months from February is,February,2,3,May,April,July,April,October,5.1328125,-0.010416666977107525,-0.0546875,12.765625,1.460144565450944
+paper,. Let's do some calendar math. Two months from March is,March,2,3,June,May,August,May,May,1.609375,-0.0013020833721384406,-0.1015625,13.46875,0.9659631838933683
+paper,. Let's do some calendar math. Two months from April is,April,2,3,July,June,September,June,June,2.046875,0.0546875,0.0234375,14.16015625,0.9295125718780723
+paper,. Let's do some calendar math. Two months from May is,May,2,3,August,July,October,July,July,1.4453125,0.013020833022892475,-0.0234375,13.5,0.8907587093971365
+paper,. Let's do some calendar math. Two months from June is,June,2,3,September,August,November,August,August,0.75,0.02604166604578495,-0.0078125,12.625,0.8403320603066203
+paper,. Let's do some calendar math. Two months from July is,July,2,3,October,September,December,September,September,1.6171875,0.0416666679084301,0.0390625,14.20703125,1.0225762399363603
+paper,. Let's do some calendar math. Two months from August is,August,2,3,November,October,January,October,October,2.3125,0.0494791679084301,-0.0703125,15.97265625,1.0964053526354485
+paper,. Let's do some calendar math. Two months from September is,September,2,3,December,November,February,November,November,1.296875,0.01953125,-0.1015625,13.4609375,0.8646351314820504
+paper,. Let's do some calendar math. Two months from October is,October,2,3,January,December,March,December,December,3.171875,0.07421875,0.0234375,15.1171875,0.977907362669501
+paper,. Let's do some calendar math. Two months from November is,November,2,3,February,January,April,January,March,6.015625,0.052734375,0.03125,13.9765625,1.108853043099813
+paper,. Let's do some calendar math. Two months from December is,December,2,3,March,February,May,February,April,4.1171875,-0.0703125,0.015625,13.375,1.3453870136662915
+paper,. Let's do some calendar math. Five months from January is,January,5,3,April,June,September,June,June,2.09765625,0.060546875,-0.05859375,14.6640625,0.9321791605998105
+paper,. Let's do some calendar math. Five months from February is,February,5,3,May,July,October,July,November,12.40234375,0.08203125,0.3515625,14.5234375,1.4974539618690832
+paper,. Let's do some calendar math. Five months from March is,March,5,3,June,August,November,August,October,5.046875,0.01171875,-0.1953125,12.58984375,1.032504904112828
+paper,. Let's do some calendar math. Five months from April is,April,5,3,July,September,December,September,September,3.859375,0.0481770820915699,-0.0390625,13.515625,0.9597507190552856
+paper,. Let's do some calendar math. Five months from May is,May,5,3,August,October,January,October,October,4.296875,0.0859375,-0.0234375,14.36328125,0.9317312870092124
+paper,. Let's do some calendar math. Five months from June is,June,5,3,September,November,February,November,November,2.8515625,0.0774739608168602,0.140625,14.41015625,0.9260498001769124
+paper,. Let's do some calendar math. Five months from July is,July,5,3,October,December,March,December,January,4.2265625,0.013020833022892475,0.1640625,15.375,1.0730281734103573
+paper,. Let's do some calendar math. Five months from August is,August,5,3,November,January,April,January,February,3.9609375,0.154296875,0.2890625,15.859375,1.1602046331650164
+paper,. Let's do some calendar math. Five months from September is,September,5,3,December,February,May,February,March,2.04296875,0.0462239570915699,-0.2265625,14.73046875,0.943878688357658
+paper,. Let's do some calendar math. Five months from October is,October,5,3,January,March,June,March,May,9.3671875,0.1497395783662796,0.3359375,12.0234375,1.1103496765338658
+paper,. Let's do some calendar math. Five months from November is,November,5,3,February,April,July,April,June,7.3671875,0.0065104165114462376,-0.0625,12.78125,1.1792639323877054
+paper,. Let's do some calendar math. Five months from December is,December,5,3,March,May,August,May,September,11.04296875,0.060546875,0.32421875,14.62890625,1.4556736853750845
+paper,. Let's do some calendar math. Seven months from January is,January,7,3,April,August,November,July,July,3.8046875,-0.0013020833721384406,-0.0390625,11.01171875,0.9493525635787983
+paper,. Let's do some calendar math. Seven months from February is,February,7,3,May,September,December,August,January,11.47265625,0.0716145858168602,0.2890625,11.55078125,1.542456791825496
+paper,. Let's do some calendar math. Seven months from March is,March,7,3,June,October,January,October,October,5.0859375,-0.0598958320915699,-0.28125,13.70703125,1.0409069039660062
+paper,. Let's do some calendar math. Seven months from April is,April,7,3,July,November,February,October,January,4.453125,0.0807291641831398,-0.08203125,10.90625,0.994878553249591
+paper,. Let's do some calendar math. Seven months from May is,May,7,3,August,December,March,December,December,3.8125,0.0625,-0.15234375,12.6875,0.9505302625032809
+paper,. Let's do some calendar math. Seven months from June is,June,7,3,September,January,April,January,January,2.3046875,0.06640625,0.203125,11.79296875,0.9732209866481932
+paper,. Let's do some calendar math. Seven months from July is,July,7,3,October,February,May,January,February,1.828125,0.048828125,0.15234375,9.765625,1.0646575460679437
+paper,. Let's do some calendar math. Seven months from August is,August,7,3,November,March,June,February,April,1.94921875,0.107421875,0.01953125,12.73828125,1.1314290111134246
+paper,. Let's do some calendar math. Seven months from September is,September,7,3,December,April,July,March,April,1.68359375,-0.0462239570915699,0.0546875,11.75390625,0.9110179205304164
+paper,. Let's do some calendar math. Seven months from October is,October,7,3,January,May,August,April,October,8.1015625,-0.080078125,-0.08203125,9.5703125,1.1214065297493543
+paper,. Let's do some calendar math. Seven months from November is,November,7,3,February,June,September,June,August,8.8828125,0.0325520820915699,0.046875,12.46875,1.2246079794908422
+paper,. Let's do some calendar math. Seven months from December is,December,7,3,March,July,October,June,October,10.92578125,0.1725260466337204,0.13671875,14.19140625,1.455969572804262
+paper-after,Let's do some calendar math. Two months after January is,January,2,3,April,March,June,March,March,0.5546875,-0.0703125,-0.15625,11.953125,0.7131730184583873
+paper-after,Let's do some calendar math. Two months after February is,February,2,3,May,April,July,April,October,3.546875,-0.02604166604578495,-0.09375,12.203125,1.3154399637573824
+paper-after,Let's do some calendar math. Two months after March is,March,2,3,June,May,August,May,May,2.4453125,-0.02604166604578495,0.171875,12.58203125,0.9798842580888806
+paper-after,Let's do some calendar math. Two months after April is,April,2,3,July,June,September,June,June,2.28125,0.0859375,0.2578125,11.3515625,0.902820535068757
+paper-after,Let's do some calendar math. Two months after May is,May,2,3,August,July,October,July,July,1.3046875,-0.02473958395421505,0.125,11.3203125,0.8092823992534576
+paper-after,Let's do some calendar math. Two months after June is,June,2,3,September,August,November,August,August,0.59375,0.02213541604578495,-0.1484375,9.8984375,0.7564693057826886
+paper-after,Let's do some calendar math. Two months after July is,July,2,3,October,September,December,September,September,0.9453125,0.0559895820915699,-0.0859375,11.125,0.9459271035067469
+paper-after,Let's do some calendar math. Two months after August is,August,2,3,November,October,January,October,October,1.40625,0.0638020858168602,0.125,10.8359375,0.9648991629146844
+paper-after,Let's do some calendar math. Two months after September is,September,2,3,December,November,February,November,November,1.03125,-0.00390625,0.0,9.73046875,0.8121379751220916
+paper-after,Let's do some calendar math. Two months after October is,October,2,3,January,December,March,December,December,1.59375,0.0872395858168602,0.125,12.39453125,0.8896741557734975
+paper-after,Let's do some calendar math. Two months after November is,November,2,3,February,January,April,January,March,5.4609375,-0.0533854179084301,0.0546875,11.96875,1.0358983145228036
+paper-after,Let's do some calendar math. Two months after December is,December,2,3,March,February,May,February,April,3.5,-0.1015625,-0.1796875,11.4453125,1.2467339948026974
+paper-after,Let's do some calendar math. Five months after January is,January,5,3,April,June,September,June,June,0.8515625,0.01822916604578495,0.0234375,7.015625,0.6993969046755805
+paper-after,Let's do some calendar math. Five months after February is,February,5,3,May,July,October,July,November,4.609375,0.0,0.296875,7.765625,1.3072856223265676
+paper-after,Let's do some calendar math. Five months after March is,March,5,3,June,August,November,August,September,2.25,-0.0403645820915699,-0.03125,4.703125,1.0025476564607416
+paper-after,Let's do some calendar math. Five months after April is,April,5,3,July,September,December,October,October,0.421875,-0.0078125,-0.0234375,2.6875,0.8987244878790956
+paper-after,Let's do some calendar math. Five months after May is,May,5,3,August,October,January,October,October,1.28125,-0.015625,-0.0390625,5.2890625,0.7933292430180885
+paper-after,Let's do some calendar math. Five months after June is,June,5,3,September,November,February,December,December,0.8828125,0.0377604179084301,0.0703125,4.8203125,0.760995098983338
+paper-after,Let's do some calendar math. Five months after July is,July,5,3,October,December,March,January,January,1.65625,0.1119791641831398,0.171875,3.9296875,0.9705630317788189
+paper-after,Let's do some calendar math. Five months after August is,August,5,3,November,January,April,February,May,0.7734375,0.06640625,-0.1484375,2.0234375,0.9542213372066628
+paper-after,Let's do some calendar math. Five months after September is,September,5,3,December,February,May,April,June,0.9296875,-0.0651041641831398,-0.15625,2.984375,0.809207329465538
+paper-after,Let's do some calendar math. Five months after October is,October,5,3,January,March,June,April,July,2.4921875,0.0872395858168602,-0.0625,4.5703125,0.9318550608265204
+paper-after,Let's do some calendar math. Five months after November is,November,5,3,February,April,July,May,June,3.7265625,-0.0716145858168602,-0.0859375,6.4921875,1.0707575782384087
+paper-after,Let's do some calendar math. Five months after December is,December,5,3,March,May,August,May,July,4.9140625,-0.013020833022892475,0.328125,7.890625,1.3046816574759543
+paper-after,Let's do some calendar math. Seven months after January is,January,7,3,April,August,November,July,July,0.375,0.0052083334885537624,0.078125,3.265625,0.7054104596149269
+paper-after,Let's do some calendar math. Seven months after February is,February,7,3,May,September,December,August,November,3.53125,0.02083333395421505,0.1875,5.8125,1.3155112207451582
+paper-after,Let's do some calendar math. Seven months after March is,March,7,3,June,October,January,October,October,1.984375,-0.05859375,-0.234375,3.8359375,1.008309896142601
+paper-after,Let's do some calendar math. Seven months after April is,April,7,3,July,November,February,October,October,0.171875,-0.0638020858168602,-0.3203125,1.5234375,0.9146956704600953
+paper-after,Let's do some calendar math. Seven months after May is,May,7,3,August,December,March,November,December,0.734375,0.02734375,-0.515625,3.953125,0.8137633987896861
+paper-after,Let's do some calendar math. Seven months after June is,June,7,3,September,January,April,December,December,1.265625,0.1484375,0.34375,4.4765625,0.8105142883729798
+paper-after,Let's do some calendar math. Seven months after July is,July,7,3,October,February,May,January,January,1.6875,0.1041666641831398,0.328125,3.3203125,0.9768411518813411
+paper-after,Let's do some calendar math. Seven months after August is,August,7,3,November,March,June,May,May,0.7421875,0.0026041667442768812,-0.2578125,1.5234375,0.9724052307140629
+paper-after,Let's do some calendar math. Seven months after September is,September,7,3,December,April,July,June,June,1.09375,-0.0377604179084301,-0.15625,5.046875,0.7775995798113028
+paper-after,Let's do some calendar math. Seven months after October is,October,7,3,January,May,August,July,July,1.9609375,-0.0494791679084301,-0.21875,3.515625,0.9357052755042069
+paper-after,Let's do some calendar math. Seven months after November is,November,7,3,February,June,September,June,August,2.6796875,-0.01171875,-0.3125,5.0,1.0976491497403136
+paper-after,Let's do some calendar math. Seven months after December is,December,7,3,March,July,October,July,September,3.3828125,0.0716145858168602,0.28125,6.2734375,1.3185071296493853

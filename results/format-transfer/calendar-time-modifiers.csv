@@ -1,0 +1,5 @@
+concept,modifier,paired_examples,mean_shift_degrees,expected_sign_fraction
+Weekdays,early,56,-0.8559542518801042,0.625
+Weekdays,late,56,-0.5838537590128539,0.48214285714285715
+Months,early,96,-0.11223136761706203,0.40625
+Months,late,96,-0.4030245694431064,0.5625

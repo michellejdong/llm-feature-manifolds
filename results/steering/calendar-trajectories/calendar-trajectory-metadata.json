@@ -1,0 +1,36 @@
+{
+  "model": "mlx-community/Mistral-7B-v0.1-q",
+  "revision": "1b5b8ebdb79dcba7d6a8fc002619aaa3043c9f34",
+  "pre_block_layer": 28,
+  "fit_offsets": [
+    1,
+    3,
+    -2
+  ],
+  "calibration_offsets": [
+    5,
+    -4
+  ],
+  "test_movement_sequences": [
+    [
+      2,
+      -1,
+      4,
+      -2
+    ],
+    [
+      -3,
+      5,
+      -4,
+      1
+    ]
+  ],
+  "calibration_circular_scores": {
+    "12": -0.38398437685622294,
+    "16": -0.05789413807321378,
+    "20": 0.7083724558428274,
+    "24": 0.8921487855741682,
+    "28": 0.952235268341601,
+    "30": 0.951702427056905
+  }
+}

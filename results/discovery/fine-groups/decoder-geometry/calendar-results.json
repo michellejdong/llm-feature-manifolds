@@ -1,0 +1,132 @@
+{
+  "ranking_sha256_before_label_reveal": {
+    "decoder-pile-fit-rank.csv": "281f3ecd77033363fe2df0d2c67c5123390fe52d06ffee4fc946956371a7191e",
+    "decoder-news-test-rank.csv": "3d87c91f51629da8c3d7154eb078013627e02201b66caf3bb7ea1e576d1ec1bf"
+  },
+  "calendars": {
+    "Weekdays": {
+      "group": 367,
+      "labels": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "pc2_pc3_variance": 0.13498252630233765,
+      "splits": {
+        "pile-fit": {
+          "labeled_tokens": 431,
+          "counts": [
+            72,
+            53,
+            47,
+            62,
+            80,
+            59,
+            58
+          ],
+          "token_accuracy": 0.19489559164733178,
+          "token_mae_degrees": 68.98719125279034,
+          "centroid_mae_degrees": 26.392887854426267,
+          "labeled_documents": 150,
+          "largest_document_fraction": 0.0951276102088167,
+          "raw_rank": 266,
+          "prototype_rank": 348
+        },
+        "news-test": {
+          "labeled_tokens": 1367,
+          "counts": [
+            170,
+            144,
+            155,
+            154,
+            209,
+            279,
+            256
+          ],
+          "token_accuracy": 0.1799561082662765,
+          "token_mae_degrees": 77.10673120433158,
+          "centroid_mae_degrees": 59.60714537689846,
+          "labeled_documents": 466,
+          "largest_document_fraction": 0.010972933430870519,
+          "raw_rank": 179,
+          "prototype_rank": 371
+        }
+      }
+    },
+    "Months": {
+      "group": 214,
+      "labels": [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+      ],
+      "pc2_pc3_variance": 0.18928319215774536,
+      "splits": {
+        "pile-fit": {
+          "labeled_tokens": 1226,
+          "counts": [
+            90,
+            73,
+            106,
+            88,
+            171,
+            109,
+            121,
+            79,
+            102,
+            113,
+            84,
+            90
+          ],
+          "token_accuracy": 0.25938009787928223,
+          "token_mae_degrees": 46.5209282691699,
+          "centroid_mae_degrees": 44.81855996038916,
+          "labeled_documents": 301,
+          "largest_document_fraction": 0.05301794453507341,
+          "raw_rank": 89,
+          "prototype_rank": 372
+        },
+        "news-test": {
+          "labeled_tokens": 1367,
+          "counts": [
+            109,
+            95,
+            186,
+            212,
+            237,
+            96,
+            73,
+            76,
+            65,
+            59,
+            82,
+            77
+          ],
+          "token_accuracy": 0.1960497439648866,
+          "token_mae_degrees": 50.31135539705412,
+          "centroid_mae_degrees": 40.54338474256827,
+          "labeled_documents": 469,
+          "largest_document_fraction": 0.019751280175566936,
+          "raw_rank": 57,
+          "prototype_rank": 469
+        }
+      }
+    }
+  },
+  "document_overlap_counts": {
+    "pile-fit vs news-test": 0
+  }
+}
